@@ -1,5 +1,5 @@
 --- 
-title: "The `bdDwC` user guide"
+title: "`bdDwC` user guide"
 author: "Author: TBA"
 date: "2018-09-01"
 site: bookdown::bookdown_site
@@ -12,6 +12,6 @@ url: 'http\://tom-gu.github.io/bdDwC-guide/'
 description: "Make your data fields Darwin Core (DwC) compatible, easily!"
 ---
 
-# Preface {-}
+# Introduction {-}
 
 This is the very first part of the book.

@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="installing-bddwc.html">
-<link rel="next" href="technical-details.html">
+<link rel="prev" href="index.html">
+<link rel="next" href="diving-in.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -130,18 +130,30 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="diving-in" class="section level1">
-<h1><span class="header-section-number">Chapter 2</span> Diving In</h1>
-<p>Now let’s talk details.</p>
+<div id="installing-bddwc" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Installing <code>bdDwC</code></h1>
+<div id="stable-version-from-cran" class="section level2">
+<h2><span class="header-section-number">1.1</span> Stable version from CRAN</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># The easiest way to get bdDwC is to install the whole bdverse:</span>
+<span class="kw">install.packages</span>(<span class="st">&quot;bdverse&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Alternatively, install just bdDwC:</span>
+<span class="kw">install.packages</span>(<span class="st">&quot;bdDwC&quot;</span>)</code></pre></div>
+</div>
+<div id="development-version-from-github" class="section level2">
+<h2><span class="header-section-number">1.2</span> Development version from GitHub</h2>
+<p>Windows users install <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a> first.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)
+devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;bd-R/bdDwC&quot;</span>)</code></pre></div>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="installing-bddwc.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="technical-details.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="diving-in.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -171,7 +183,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/tom-gu/bdDwC-guide/edit/master/02-Diving-In.Rmd",
+"link": "https://github.com/tom-gu/bdDwC-guide/edit/master/01-Installation.Rmd",
 "text": "Edit"
 },
 "download": ["bdDwC-guide.pdf", "bdDwC-guide.epub"],
