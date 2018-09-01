@@ -1,11 +1,12 @@
 bookdown::gitbook:
   css: style.css
   split_by: chapter
+  highlight: tango
   config:
     toc:
-      collapse: subsection
+      collapse: section
       before: |
-        <li><a href="./">bdDwC Guide</a></li>
+        <li><a href="./">bdDwC User Guide</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">The bdverse team</a></li>
     edit: https://github.com/tom-gu/bdDwC-guide/edit/master/%s

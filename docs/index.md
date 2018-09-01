@@ -1,6 +1,6 @@
 --- 
-title: "`bdDwC` user guide"
-author: "Author: TBA"
+title: "`bdDwC` User Guide"
+author: "Authors: TBA"
 date: "2018-09-01"
 site: bookdown::bookdown_site
 documentclass: book
@@ -9,7 +9,7 @@ biblio-style: apalike
 link-citations: yes
 github-repo: tom-gu/bdDwC-guide
 url: 'http\://tom-gu.github.io/bdDwC-guide/'
-description: "Make your data fields Darwin Core (DwC) compatible, easily!"
+description: "Make your field names standardized to Darwin Core Darwin Core (DwC) compatible, easily!"
 ---
 
 # Introduction {-}

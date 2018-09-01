@@ -1,5 +1,6 @@
 # Installing `bdDwC`
 
+
 ## Stable version from CRAN
 
 ```r
@@ -20,3 +21,11 @@ Windows users install [Rtools](https://cran.r-project.org/bin/windows/Rtools/) f
 install.packages("devtools")
 devtools::install_github("bd-R/bdDwC")
 ```
+
+## Possible problems and solutions
+
+### ???
+TBA
+
+### ?????
+TBA
