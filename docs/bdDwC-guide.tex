@@ -125,10 +125,24 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2018-09-01}
+    \date{2018-09-03}
 
 \usepackage{booktabs}
 
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}[chapter]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
 \begin{document}
 \maketitle
 
@@ -141,10 +155,17 @@
 
 This is the very first part of the book.
 
+\subsubsection*{Motivation}\label{motivation}
+\addcontentsline{toc}{subsubsection}{Motivation}
+
 \chapter{\texorpdfstring{Installing
 \texttt{bdDwC}}{Installing bdDwC}}\label{installing-bddwc}
 
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
 \section{Stable version from CRAN}\label{stable-version-from-cran}
+
+\textbf{{{[} Need To Be Updated! {]}}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -173,8 +194,8 @@ Windows users install
 \end{Highlighting}
 \end{Shaded}
 
-\section{Possible problems and
-solutions}\label{possible-problems-and-solutions}
+\section{Possible problems \&
+solutions}\label{possible-problems-solutions}
 
 \subsection{???}\label{section}
 
@@ -184,16 +205,243 @@ TBA
 
 TBA
 
-\chapter{Diving In}\label{diving-in}
+\chapter{The shiny app}\label{the-shiny-app}
 
-Now let's talk details.
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
-\chapter{Technical Details}\label{technical-details}
+\section{Launching the app}\label{launching-the-app}
 
-Now I'll teach you some crazy math, but I need to work it out
-first\ldots{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(bdDwC) }\CommentTok{# Uplaod package library}
+\KeywordTok{runDwC}\NormalTok{() }\CommentTok{# Launch the app}
+\end{Highlighting}
+\end{Shaded}
 
-\bibliography{book.bib}
+\section{App overview}\label{app-overview}
+
+\textbf{{{[} Need To Be Updated! {]}}}
+
+\begin{figure}
+\centering
+\includegraphics{img/bdDwC_Getting_started.png}
+\caption{bdDwC App Overview}
+\end{figure}
+
+In the first screen, you'll need to upload or download your biodiversity
+data; choose dictionary and run the Darwinizer.
+
+\section{Data upload}\label{data-upload}
+
+\subsection{From a local file}\label{from-a-local-file}
+
+A CSV file or a Darwin Core Archive (DwC-A) zip file can be uploaded.
+
+\textbf{Local file size cannot exceed {1GB {[}?{]}}}
+
+\textbf{{{[} Need To Be Updated! {]}}}
+
+\begin{figure}
+\centering
+\includegraphics{img/bdDwC_Up-local_file.png}
+\caption{Data upload from a local file}
+\end{figure}
+
+\subsection{From an online database}\label{from-an-online-database}
+
+Also, data can be retrieved directly from various online biodiversity
+databases. You need only to:
+
+\begin{itemize}
+\tightlist
+\item
+  Select the database
+\item
+  Specify the desired scientific name.
+\item
+  Specify the number of records (upper limit of 50,000).
+\item
+  Check the box if records must have coordinates.
+\item
+  Wait for data to be downloaded.
+\end{itemize}
+
+\textbf{{{[} Need To Be Updated! {]}}}
+
+\begin{figure}
+\centering
+\includegraphics{img/bdDwC_Up-database.png}
+\caption{Data upload from online biodiversity databases}
+\end{figure}
+
+\section{Dictionary}\label{dictionary}
+
+A dictionary is a key component when Darwinizing a dataset. It's
+basically a lookup table that lists a possible variation of field name
+and it corresponding DwC names.
+
+\subsection{The Darwin Cloud
+dictionary}\label{the-darwin-cloud-dictionary}
+
+The Darwin Cloud dictionary \citep{DarwinCloud}, is a lookup table that
+accumulates different variations in DwC field names from different
+publishers. This valuable dictionary was created and is maintained by
+the Kurator project (\url{http://kurator.acis.ufl.edu/kurator-web/}),
+which provides workflow tools for data quality improvement of
+biodiversity data, via a user-friendly web interface. See
+\protect\hyperlink{the-kurator-project}{The Kurator project} section for
+more information.
+
+\subsubsection*{Updating the Darwin Cloud
+dictionary}\label{updating-the-darwin-cloud-dictionary}
+\addcontentsline{toc}{subsubsection}{Updating the Darwin Cloud
+dictionary}
+
+It's recommended to update the Darwin Cloud file. This can be done
+easily by clicking the \textbf{Update DC} button.
+
+\textbf{{{[} Need To Be Updated! {]}}}
+
+\begin{figure}
+\centering
+\includegraphics{img/bdDwC_update-DC.png}
+\caption{Updating the Darwin Cloud}
+\end{figure}
+
+\subsection{Your own dictionary}\label{your-own-dictionary}
+
+It's also possible to add your own dictionary by simply creating a CSV
+file with two columns, one for the Field Names and one for the Standard
+Names.
+
+\textbf{{{[} Need To Be Updated! {]}}}
+
+\begin{figure}
+\centering
+\includegraphics{img/bdDwC_personal_dictionary.png}
+\caption{Uploading your own dictionary}
+\end{figure}
+
+\section{Darwinizing your dataset}\label{darwinizing-your-dataset}
+
+Once a dataset is uploaded, the `Submit to Darwinizer' button is
+activated, Clicking it will Darwinize the dataset.
+
+\textbf{{{[} Need To Be Updated! {]}}}
+
+\begin{figure}
+\centering
+\includegraphics{img/bdDwC_Submit.png}
+\caption{Submit to Darwinizer button}
+\end{figure}
+
+\section{Darwinizer results}\label{darwinizer-results}
+
+\subsection{Results page overwiew}\label{results-page-overwiew}
+
+\textbf{{{[} Need To Be Updated! {]}}}
+
+\begin{figure}
+\centering
+\includegraphics{img/bdDwC_Darwinizer_results.png}
+\caption{Darwinizer results}
+\end{figure}
+
+Manually renaming field names can be done very easily, just choose the
+two corresponding fields and click the Rename button.
+
+\textbf{{{[} Need To Be Updated! {]}}}
+
+\begin{figure}
+\centering
+\includegraphics{img/bdDwC_Manual_rename.png}
+\caption{Manually renaming fields}
+\end{figure}
+
+Hovering over a DwC standard name will display its description.
+
+\section{Download your Darwinized
+data}\label{download-your-darwinized-data}
+
+\textbf{{{[} Need To Be Updated! {]}}}
+
+\section{Closing the app}\label{closing-the-app}
+
+\chapter{Command line operations}\label{command-line-operations}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+operations \texttt{bdDwC} from the command line
+
+\chapter{Examples}\label{examples}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{{{[} TBA {]}}}
+
+I was thinking to show the Darwinizer app with four distinct datasets:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  ALA dataset in DwC format
+\item
+  ALA dataset in legacy format
+\item
+  VertNet dataset
+\item
+  GBIF dataset
+\end{enumerate}
+
+\chapter{Getting your feedback}\label{getting-your-feedback}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+Loading\ldots{}
+
+\section{Bug report}\label{bug-report}
+
+\section{Join us}\label{join-us}
+
+\chapter{\texorpdfstring{\texttt{bdDwC}
+citation}{bdDwC citation}}\label{bddwc-citation}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{citation}\NormalTok{(}\StringTok{"bdDwC"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## To cite package 'bdDwC' in publications use:
+## 
+##   Povilas Gibas, Tomer Gueta, Vijay Barve, Thiloshon Nagarajah and
+##   Yohay Carmel (2018). bdDwC: Darwinizer: Darwin Core (DwC) Field
+##   Names Standardization. R package version 0.1.15.
+## 
+## A BibTeX entry for LaTeX users is
+## 
+##   @Manual{,
+##     title = {bdDwC: Darwinizer: Darwin Core (DwC) Field Names Standardization},
+##     author = {Povilas Gibas and Tomer Gueta and Vijay Barve and Thiloshon Nagarajah and Yohay Carmel},
+##     year = {2018},
+##     note = {R package version 0.1.15},
+##   }
+\end{verbatim}
+
+\chapter{Learn more about Darwin
+Core}\label{learn-more-about-darwin-core}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\hypertarget{the-kurator-project}{\section{The Kurator
+project}\label{the-kurator-project}}
+
+\bibliography{book.bib,bib/DarwinCloud.bib}
 
 
 \end{document}

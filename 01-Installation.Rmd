@@ -1,8 +1,10 @@
 # Installing `bdDwC`
 
+***
 
 ## Stable version from CRAN
 
+**<span style="color:red">[ Need To Be Updated! ]</span>**
 ```r
 # The easiest way to get bdDwC is to install the whole bdverse:
 install.packages("bdverse")
@@ -22,7 +24,7 @@ install.packages("devtools")
 devtools::install_github("bd-R/bdDwC")
 ```
 
-## Possible problems and solutions
+## Possible problems & solutions
 
 ### ???
 TBA
