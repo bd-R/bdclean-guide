@@ -137,15 +137,12 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="3.3" data-path="command-line-operations.html"><a href="command-line-operations.html#updating-the-darwin-cloud-dictionary"><i class="fa fa-check"></i><b>3.3</b> Updating <a href="the-shiny-app.html#the-darwin-cloud-dictionary">the Darwin Cloud dictionary</a></a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="examples.html"><a href="examples.html"><i class="fa fa-check"></i><b>4</b> Examples</a></li>
-<li class="chapter" data-level="5" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i><b>5</b> References</a></li>
-<li class="chapter" data-level="6" data-path="getting-your-feedback.html"><a href="getting-your-feedback.html"><i class="fa fa-check"></i><b>6</b> Getting your feedback</a><ul>
-<li class="chapter" data-level="6.1" data-path="getting-your-feedback.html"><a href="getting-your-feedback.html#report-a-bug"><i class="fa fa-check"></i><b>6.1</b> Report a bug</a></li>
-<li class="chapter" data-level="6.2" data-path="getting-your-feedback.html"><a href="getting-your-feedback.html#contribute"><i class="fa fa-check"></i><b>6.2</b> Contribute</a></li>
+<li class="chapter" data-level="5" data-path="getting-your-feedback.html"><a href="getting-your-feedback.html"><i class="fa fa-check"></i><b>5</b> Getting your feedback</a><ul>
+<li class="chapter" data-level="5.1" data-path="getting-your-feedback.html"><a href="getting-your-feedback.html#report-a-bug"><i class="fa fa-check"></i><b>5.1</b> Report a bug</a></li>
+<li class="chapter" data-level="5.2" data-path="getting-your-feedback.html"><a href="getting-your-feedback.html#contribute"><i class="fa fa-check"></i><b>5.2</b> Contribute</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="bddwc-citation.html"><a href="bddwc-citation.html"><i class="fa fa-check"></i><b>7</b> <code>bdDwC</code> citation</a></li>
-<li class="chapter" data-level="8" data-path="learn-more-about-darwin-core.html"><a href="learn-more-about-darwin-core.html"><i class="fa fa-check"></i><b>8</b> Learn more about Darwin Core</a><ul>
-<li class="chapter" data-level="8.1" data-path="learn-more-about-darwin-core.html"><a href="learn-more-about-darwin-core.html#references-2"><i class="fa fa-check"></i><b>8.1</b> References</a></li>
-</ul></li>
+<li class="chapter" data-level="6" data-path="bddwc-citation.html"><a href="bddwc-citation.html"><i class="fa fa-check"></i><b>6</b> <code>bdDwC</code> citation</a></li>
+<li class="chapter" data-level="7" data-path="learn-more-about-darwin-core.html"><a href="learn-more-about-darwin-core.html"><i class="fa fa-check"></i><b>7</b> Learn more about Darwin Core</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">The bdverse team</a></li>
 
@@ -173,11 +170,34 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="introduction" class="section level1 unnumbered">
 <h1>Introduction</h1>
-<p><strong><span style="color:red">[ TBA ]</span></strong></p>
-<div id="motivation" class="section level4 unnumbered">
-<h4>Motivation</h4>
-<p><strong><span style="color:red">[ TBA ]</span></strong></p>
+<p><code>bdDwC</code> is an R package that supplies a Shiny app and a set of functions for standardizing field names according to the Darwin Core (DwC) format. <code>bdDwC</code> is a key element in the <code>bdverse</code>– a collection of tools, that form a general framework for facilitating biodiversity science in R.</p>
+<div class="figure">
+<img src="img/bdDwC_bdverse.png" title="bdDwC-bdverse" alt="bdDwC in the bdverse" />
+<p class="caption">bdDwC in the bdverse</p>
+</div>
+<div id="what-is-the-darwin-core-standard" class="section level4 unnumbered">
+<h4>What is the Darwin Core standard?</h4>
+<p>Darwin Core (DwC) is a global standard for publishing biodiversity data, whose goal is to facilitate the sharing of biodiversity information, by providing identifiers, labels, and definitions <span class="citation">(D. A. G. Wieczorek John AND Bloom <a href="#ref-DwC-paper">2012</a>)</span>. DwC was established as an evolving community-developed standard, by the Biodiversity Information Standards Working Group (www.tdwg.org). DwC is a library of definitions of common biodiversity data terms, each of which represents a field within the database. There are around 200 such fields (not including DwC extensions); a full set of the DwC terms with their descriptions is available in the Quick Reference Guide (<a href="http://rs.tdwg.org/dwc/terms" class="uri">http://rs.tdwg.org/dwc/terms</a>). For more information see section <a href="learn-more-about-darwin-core.html#learn-more-about-darwin-core">6</a>.</p>
+</div>
+<div id="why-its-important-to-darwinize-a-dataset" class="section level4 unnumbered">
+<h4>Why it’s important to “Darwinize” a dataset</h4>
+<p>Running the Darwinizer enables you to standardize many field names in your dataset – and that allows the <code>bdverse</code> to handle data from various biodiversity portals, and lets you enjoy all of <code>bdvers</code> features, regardless of publishers variation in field names.</p>
+</div>
+<div id="fundings" class="section level4 unnumbered">
+<h4>Fundings</h4>
+<div class="figure">
+<img src="img/ISF.png" title="ISF" />
 
+</div>
+<p><a href="https://summerofcode.withgoogle.com/%20target=%22_blank%22"><img src="img/GSoC.png" title="GSoC website" /></a></p>
+<p><a href="https://github.com/rstats-gsoc/gsoc2018/wiki/Darwinazing-biodiversity-data-in-R">See the GSoC project idea page</a></p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-DwC-paper">
+<p>Wieczorek, David AND Guralnick, John AND Bloom. 2012. “Darwin Core: An Evolving Community-Developed Biodiversity Data Standard.” <em>PLOS ONE</em> 7 (1). Public Library of Science: 1–8. doi:<a href="https://doi.org/10.1371/journal.pone.0029715">10.1371/journal.pone.0029715</a>.</p>
 </div>
 </div>
             </section>

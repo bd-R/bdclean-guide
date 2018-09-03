@@ -1,6 +1,6 @@
 # The shiny app
 
----
+***
 
 ## Launching the app
 
@@ -53,7 +53,7 @@ A dictionary is a key component when Darwinizing a dataset. It's basically a loo
 
 ### The Darwin Cloud dictionary
 
-The Darwin Cloud dictionary [@DarwinCloud], is a lookup table that accumulates different variations in DwC field names from different publishers. This valuable dictionary was created and is maintained by the Kurator project (http://kurator.acis.ufl.edu/kurator-web/), which provides workflow tools for data quality improvement of biodiversity data, via a user-friendly web interface. 
+The Darwin Cloud dictionary [@DarwinCloud], is a lookup table that accumulates different variations in DwC field names from different publishers. This valuable and critical dictionary was created and is maintained by the Kurator project (http://kurator.acis.ufl.edu/kurator-web/), which provides workflow tools for data quality improvement of biodiversity data, via a user-friendly web interface. The development of bdDwC was inspired by [Kurator's own Darwinizer](https://github.com/kurator-org/kurator-validation/wiki/CSV-File-Darwinizer target="_blank").
 
 #### Updating the Darwin Cloud {-}
 
@@ -102,7 +102,7 @@ Hovering over a DwC standard name will display its description.
 **<span style="color:red">[ Need To Be Updated! ]</span>**
 
 ## Closing the app
-
+Just close the app browser tab, and the R session will be terminated. To reopen it run in the R Console `runDwC()`.
 
 ## References
 

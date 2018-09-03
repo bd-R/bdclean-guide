@@ -1,6 +1,6 @@
 # Examples
 
----
+***
 
 **<span style="color:red">[ TBA ]</span>**
 
@@ -11,5 +11,3 @@ I'm thinking to show the Darwinizer app with four distinct datasets:
 3. VertNet dataset
 4. GBIF dataset
 
-
-# References

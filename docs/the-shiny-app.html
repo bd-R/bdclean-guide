@@ -137,15 +137,12 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="3.3" data-path="command-line-operations.html"><a href="command-line-operations.html#updating-the-darwin-cloud-dictionary"><i class="fa fa-check"></i><b>3.3</b> Updating <a href="the-shiny-app.html#the-darwin-cloud-dictionary">the Darwin Cloud dictionary</a></a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="examples.html"><a href="examples.html"><i class="fa fa-check"></i><b>4</b> Examples</a></li>
-<li class="chapter" data-level="5" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i><b>5</b> References</a></li>
-<li class="chapter" data-level="6" data-path="getting-your-feedback.html"><a href="getting-your-feedback.html"><i class="fa fa-check"></i><b>6</b> Getting your feedback</a><ul>
-<li class="chapter" data-level="6.1" data-path="getting-your-feedback.html"><a href="getting-your-feedback.html#report-a-bug"><i class="fa fa-check"></i><b>6.1</b> Report a bug</a></li>
-<li class="chapter" data-level="6.2" data-path="getting-your-feedback.html"><a href="getting-your-feedback.html#contribute"><i class="fa fa-check"></i><b>6.2</b> Contribute</a></li>
+<li class="chapter" data-level="5" data-path="getting-your-feedback.html"><a href="getting-your-feedback.html"><i class="fa fa-check"></i><b>5</b> Getting your feedback</a><ul>
+<li class="chapter" data-level="5.1" data-path="getting-your-feedback.html"><a href="getting-your-feedback.html#report-a-bug"><i class="fa fa-check"></i><b>5.1</b> Report a bug</a></li>
+<li class="chapter" data-level="5.2" data-path="getting-your-feedback.html"><a href="getting-your-feedback.html#contribute"><i class="fa fa-check"></i><b>5.2</b> Contribute</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="bddwc-citation.html"><a href="bddwc-citation.html"><i class="fa fa-check"></i><b>7</b> <code>bdDwC</code> citation</a></li>
-<li class="chapter" data-level="8" data-path="learn-more-about-darwin-core.html"><a href="learn-more-about-darwin-core.html"><i class="fa fa-check"></i><b>8</b> Learn more about Darwin Core</a><ul>
-<li class="chapter" data-level="8.1" data-path="learn-more-about-darwin-core.html"><a href="learn-more-about-darwin-core.html#references-2"><i class="fa fa-check"></i><b>8.1</b> References</a></li>
-</ul></li>
+<li class="chapter" data-level="6" data-path="bddwc-citation.html"><a href="bddwc-citation.html"><i class="fa fa-check"></i><b>6</b> <code>bdDwC</code> citation</a></li>
+<li class="chapter" data-level="7" data-path="learn-more-about-darwin-core.html"><a href="learn-more-about-darwin-core.html"><i class="fa fa-check"></i><b>7</b> Learn more about Darwin Core</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">The bdverse team</a></li>
 
@@ -217,7 +214,7 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
 <p>A dictionary is a key component when Darwinizing a dataset. It’s basically a lookup table that lists a possible variation of field name and it corresponding DwC name.</p>
 <div id="the-darwin-cloud-dictionary" class="section level3">
 <h3><span class="header-section-number">2.4.1</span> The Darwin Cloud dictionary</h3>
-<p>The Darwin Cloud dictionary <span class="citation">(J. Wieczorek et al. <a href="#ref-DarwinCloud">2017</a>)</span>, is a lookup table that accumulates different variations in DwC field names from different publishers. This valuable dictionary was created and is maintained by the Kurator project (<a href="http://kurator.acis.ufl.edu/kurator-web/" class="uri">http://kurator.acis.ufl.edu/kurator-web/</a>), which provides workflow tools for data quality improvement of biodiversity data, via a user-friendly web interface.</p>
+<p>The Darwin Cloud dictionary <span class="citation">(J. Wieczorek et al. <a href="#ref-DarwinCloud">2017</a>)</span>, is a lookup table that accumulates different variations in DwC field names from different publishers. This valuable and critical dictionary was created and is maintained by the Kurator project (<a href="http://kurator.acis.ufl.edu/kurator-web/" class="uri">http://kurator.acis.ufl.edu/kurator-web/</a>), which provides workflow tools for data quality improvement of biodiversity data, via a user-friendly web interface. The development of bdDwC was inspired by <a href="https://github.com/kurator-org/kurator-validation/wiki/CSV-File-Darwinizer%20target=%22_blank%22">Kurator’s own Darwinizer</a>.</p>
 <div id="updating-the-darwin-cloud" class="section level4 unnumbered">
 <h4>Updating the Darwin Cloud</h4>
 <p>It’s recommended to update the Darwin Cloud file. This can be done easily by clicking the <strong>Update DC</strong> button.</p>
@@ -271,6 +268,7 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="closing-the-app" class="section level2">
 <h2><span class="header-section-number">2.8</span> Closing the app</h2>
+<p>Just close the app browser tab, and the R session will be terminated. To reopen it run in the R Console <code>runDwC()</code>.</p>
 </div>
 <div id="references" class="section level2">
 <h2><span class="header-section-number">2.9</span> References</h2>

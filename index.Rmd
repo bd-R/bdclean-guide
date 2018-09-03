@@ -6,16 +6,31 @@ site: bookdown::bookdown_site
 documentclass: book
 bibliography: [bib/book.bib, bib/DarwinCloud.bib, bib/DwC-paper.bib]
 biblio-style: apalike
-link-citations: true
+link-citations: yes
 github-repo: tom-gu/bdDwC-guide
 url: 'http\://tom-gu.github.io/bdDwC-guide/'
 description: "Darwinize your data Field names conversion to Darwin Core (DwC) format compatible, easily!"
 ---
 
 # Introduction {-}
-**<span style="color:red">[ TBA ]</span>**
 
+`bdDwC` is an R package that supplies a Shiny app and a set of functions for standardizing field names according to the Darwin Core (DwC) format. `bdDwC` is a key element in the `bdverse`-- a collection of tools, that form a general framework for facilitating biodiversity science in R.
 
+![bdDwC in the bdverse](img/bdDwC_bdverse.png "bdDwC-bdverse")
 
-#### Motivation {-} 
-**<span style="color:red">[ TBA ]</span>**
+#### What is the Darwin Core standard? {-}
+
+Darwin Core (DwC) is a global standard for publishing biodiversity data, whose goal is to facilitate the sharing of biodiversity information, by providing identifiers, labels, and definitions [@DwC-paper]. DwC was established as an evolving community-developed standard, by the Biodiversity Information Standards Working Group (www.tdwg.org). DwC is a library of definitions of common biodiversity data terms, each of which represents a field within the database. There are around 200 such fields (not including DwC extensions); a full set of the DwC terms with their descriptions is available in the Quick Reference Guide (http://rs.tdwg.org/dwc/terms). For more information see section [6][Learn more about Darwin Core].
+
+#### Why it's important to "Darwinize" a dataset {-}
+
+Running the Darwinizer enables you to standardize many field names in your dataset -- and that allows the `bdverse` to handle data from various biodiversity portals, and lets you enjoy all of `bdvers` features, regardless of publishers variation in field names.
+
+#### Fundings {-}
+
+![](img/ISF.png "ISF")
+
+[![](img/GSoC.png "GSoC website")](https://summerofcode.withgoogle.com/ target="_blank")  
+
+[See the GSoC project idea page](https://github.com/rstats-gsoc/gsoc2018/wiki/Darwinazing-biodiversity-data-in-R)
+

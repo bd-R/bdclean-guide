@@ -1,6 +1,6 @@
 # Command line operations
 
----
+***
 
 ## Load package
 Load the `bdDwC` package

@@ -153,12 +153,57 @@
 \chapter*{Introduction}\label{introduction}
 \addcontentsline{toc}{chapter}{Introduction}
 
-\textbf{{{[} TBA {]}}}
+\texttt{bdDwC} is an R package that supplies a Shiny app and a set of
+functions for standardizing field names according to the Darwin Core
+(DwC) format. \texttt{bdDwC} is a key element in the \texttt{bdverse}--
+a collection of tools, that form a general framework for facilitating
+biodiversity science in R.
 
-\subsubsection*{Motivation}\label{motivation}
-\addcontentsline{toc}{subsubsection}{Motivation}
+\begin{figure}
+\centering
+\includegraphics{img/bdDwC_bdverse.png}
+\caption{bdDwC in the bdverse}
+\end{figure}
 
-\textbf{{{[} TBA {]}}}
+\subsubsection*{What is the Darwin Core
+standard?}\label{what-is-the-darwin-core-standard}
+\addcontentsline{toc}{subsubsection}{What is the Darwin Core standard?}
+
+Darwin Core (DwC) is a global standard for publishing biodiversity data,
+whose goal is to facilitate the sharing of biodiversity information, by
+providing identifiers, labels, and definitions \citep{DwC-paper}. DwC
+was established as an evolving community-developed standard, by the
+Biodiversity Information Standards Working Group (www.tdwg.org). DwC is
+a library of definitions of common biodiversity data terms, each of
+which represents a field within the database. There are around 200 such
+fields (not including DwC extensions); a full set of the DwC terms with
+their descriptions is available in the Quick Reference Guide
+(\url{http://rs.tdwg.org/dwc/terms}). For more information see section
+\protect\hyperlink{learn-more-about-darwin-core}{6}.
+
+\subsubsection*{\texorpdfstring{Why it's important to ``Darwinize'' a
+dataset}{Why it's important to Darwinize a dataset}}\label{why-its-important-to-darwinize-a-dataset}
+\addcontentsline{toc}{subsubsection}{Why it's important to ``Darwinize''
+a dataset}
+
+Running the Darwinizer enables you to standardize many field names in
+your dataset -- and that allows the \texttt{bdverse} to handle data from
+various biodiversity portals, and lets you enjoy all of \texttt{bdvers}
+features, regardless of publishers variation in field names.
+
+\subsubsection*{Fundings}\label{fundings}
+\addcontentsline{toc}{subsubsection}{Fundings}
+
+\begin{figure}
+\centering
+\includegraphics{img/ISF.png}
+\caption{}
+\end{figure}
+
+\href{https://summerofcode.withgoogle.com/\%20target=\%22_blank\%22}{\includegraphics{img/GSoC.png}}
+
+\href{https://github.com/rstats-gsoc/gsoc2018/wiki/Darwinazing-biodiversity-data-in-R}{See
+the GSoC project idea page}
 
 \chapter{\texorpdfstring{Installing
 \texttt{bdDwC}}{Installing bdDwC}}\label{installing-bddwc}
@@ -289,10 +334,13 @@ dictionary}\label{the-darwin-cloud-dictionary}}
 
 The Darwin Cloud dictionary \citep{DarwinCloud}, is a lookup table that
 accumulates different variations in DwC field names from different
-publishers. This valuable dictionary was created and is maintained by
-the Kurator project (\url{http://kurator.acis.ufl.edu/kurator-web/}),
-which provides workflow tools for data quality improvement of
-biodiversity data, via a user-friendly web interface.
+publishers. This valuable and critical dictionary was created and is
+maintained by the Kurator project
+(\url{http://kurator.acis.ufl.edu/kurator-web/}), which provides
+workflow tools for data quality improvement of biodiversity data, via a
+user-friendly web interface. The development of bdDwC was inspired by
+\href{https://github.com/kurator-org/kurator-validation/wiki/CSV-File-Darwinizer\%20target=\%22_blank\%22}{Kurator's
+own Darwinizer}.
 
 \subsubsection*{Updating the Darwin
 Cloud}\label{updating-the-darwin-cloud}
@@ -367,6 +415,9 @@ data}\label{download-your-darwinized-data}
 \textbf{{{[} Need To Be Updated! {]}}}
 
 \section{Closing the app}\label{closing-the-app}
+
+Just close the app browser tab, and the R session will be terminated. To
+reopen it run in the R Console \texttt{runDwC()}.
 
 \section{References}\label{references}
 
@@ -446,8 +497,6 @@ I'm thinking to show the Darwinizer app with four distinct datasets:
   GBIF dataset
 \end{enumerate}
 
-\chapter{References}\label{references-1}
-
 \chapter{Getting your feedback}\label{getting-your-feedback}
 
 \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
@@ -493,28 +542,32 @@ citation}{bdDwC citation}}\label{bddwc-citation}
 ##   }
 \end{verbatim}
 
-\chapter{Learn more about Darwin
-Core}\label{learn-more-about-darwin-core}
+\hypertarget{learn-more-about-darwin-core}{\chapter{Learn more about
+Darwin Core}\label{learn-more-about-darwin-core}}
 
 \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
 \begin{itemize}
-\tightlist
 \item
-  \href{https://github.com/tdwg/dwc-qa/wiki/Webinars\%20target=\%22_blank\%22}{Darwin
-  Core Hour webinar series}
+  \textbf{\href{https://github.com/tdwg/dwc-qa\%20target=\%22_blank\%22}{The
+  Darwin Core Questions \& Answers Site}}
 \item
-  \href{https://github.com/tdwg/dwc-qa/wiki\%20target=\%22_blank\%22}{The
-  Darwin Core Questions \& Answers wiki}
+  \textbf{\href{https://github.com/tdwg/dwc-qa/wiki/Webinars\%20target=\%22_blank\%22}{Darwin
+  Core Hour webinar series}}
 \item
-  \href{https://www.gbif.org/darwin-core\%20target=\%22_blank\%22}{GBIF:
-  What is Darwin Core, and why does it matter?}
+  \textbf{\href{https://github.com/tdwg/dwc-qa/wiki\%20target=\%22_blank\%22}{The
+  Darwin Core Questions \& Answers wiki}}
 \item
-  Darwin Core: An Evolving Community-Developed Biodiversity Data
-  Standard \citep{DwC-paper}
+  \textbf{\href{https://www.gbif.org/darwin-core\%20target=\%22_blank\%22}{GBIF:
+  What is Darwin Core, and why does it matter?}}
+\item
+  \textbf{\href{https://doi.org/10.1371/journal.pone.0029715\%20target=\%22_blank\%22}{Darwin
+  Core: An Evolving Community-Developed Biodiversity Data Standard}
+  \citep{DwC-paper} }
 \end{itemize}
 
-\section{References}\label{references-2}
+\subsubsection*{References}\label{references-1}
+\addcontentsline{toc}{subsubsection}{References}
 
 \bibliography{bib/book.bib,bib/DarwinCloud.bib,bib/DwC-paper.bib}
 

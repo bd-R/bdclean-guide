@@ -1,6 +1,6 @@
 # `bdDwC` citation
 
----
+***
 
 
 ```r
