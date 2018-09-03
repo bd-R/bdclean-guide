@@ -26,8 +26,10 @@ devtools::install_github("bd-R/bdDwC")
 
 ## Possible problems & solutions
 
+**<span style="color:red">[ TBA ]</span>**
+
 ### ???
 TBA
 
-### ?????
+### ????
 TBA

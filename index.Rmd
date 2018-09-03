@@ -4,18 +4,18 @@ author: "Authors: TBA"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
-bibliography: [book.bib, bib/DarwinCloud.bib]
+bibliography: [bib/book.bib, bib/DarwinCloud.bib, bib/DwC-paper.bib]
 biblio-style: apalike
-link-citations: yes
+link-citations: true
 github-repo: tom-gu/bdDwC-guide
 url: 'http\://tom-gu.github.io/bdDwC-guide/'
 description: "Darwinize your data Field names conversion to Darwin Core (DwC) format compatible, easily!"
 ---
 
 # Introduction {-}
-
-This is the very first part of the book.
+**<span style="color:red">[ TBA ]</span>**
 
 
 
 #### Motivation {-} 
+**<span style="color:red">[ TBA ]</span>**

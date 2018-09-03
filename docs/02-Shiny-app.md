@@ -46,16 +46,16 @@ Also, data can be retrieved directly from various online biodiversity databases.
 ![Data upload from online biodiversity databases](img/bdDwC_Up-database.png "bdDwC-app data-upload-database")
 
 
-## Dictionary
+## Dictionaries
 
-A dictionary is a key component when Darwinizing a dataset. It's basically a lookup table that lists a possible variation of field name and it corresponding DwC names.
+A dictionary is a key component when Darwinizing a dataset. It's basically a lookup table that lists a possible variation of field name and it corresponding DwC name.
 
 
 ### The Darwin Cloud dictionary
 
-The Darwin Cloud dictionary [@DarwinCloud], is a lookup table that accumulates different variations in DwC field names from different publishers. This valuable dictionary was created and is maintained by the Kurator project (http://kurator.acis.ufl.edu/kurator-web/), which provides workflow tools for data quality improvement of biodiversity data, via a user-friendly web interface. See [The Kurator project] section for more information. 
+The Darwin Cloud dictionary [@DarwinCloud], is a lookup table that accumulates different variations in DwC field names from different publishers. This valuable dictionary was created and is maintained by the Kurator project (http://kurator.acis.ufl.edu/kurator-web/), which provides workflow tools for data quality improvement of biodiversity data, via a user-friendly web interface. 
 
-#### Updating the Darwin Cloud dictionary {-}
+#### Updating the Darwin Cloud {-}
 
 It's recommended to update the Darwin Cloud file. This can be done easily by clicking the **Update DC** button.
 
@@ -103,4 +103,6 @@ Hovering over a DwC standard name will display its description.
 
 ## Closing the app
 
+
+## References
 

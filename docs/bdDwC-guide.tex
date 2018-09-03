@@ -153,10 +153,12 @@
 \chapter*{Introduction}\label{introduction}
 \addcontentsline{toc}{chapter}{Introduction}
 
-This is the very first part of the book.
+\textbf{{{[} TBA {]}}}
 
 \subsubsection*{Motivation}\label{motivation}
 \addcontentsline{toc}{subsubsection}{Motivation}
+
+\textbf{{{[} TBA {]}}}
 
 \chapter{\texorpdfstring{Installing
 \texttt{bdDwC}}{Installing bdDwC}}\label{installing-bddwc}
@@ -197,11 +199,13 @@ Windows users install
 \section{Possible problems \&
 solutions}\label{possible-problems-solutions}
 
+\textbf{{{[} TBA {]}}}
+
 \subsection{???}\label{section}
 
 TBA
 
-\subsection{?????}\label{section-1}
+\subsection{????}\label{section-1}
 
 TBA
 
@@ -274,28 +278,25 @@ databases. You need only to:
 \caption{Data upload from online biodiversity databases}
 \end{figure}
 
-\section{Dictionary}\label{dictionary}
+\section{Dictionaries}\label{dictionaries}
 
 A dictionary is a key component when Darwinizing a dataset. It's
 basically a lookup table that lists a possible variation of field name
-and it corresponding DwC names.
+and it corresponding DwC name.
 
-\subsection{The Darwin Cloud
-dictionary}\label{the-darwin-cloud-dictionary}
+\hypertarget{the-darwin-cloud-dictionary}{\subsection{The Darwin Cloud
+dictionary}\label{the-darwin-cloud-dictionary}}
 
 The Darwin Cloud dictionary \citep{DarwinCloud}, is a lookup table that
 accumulates different variations in DwC field names from different
 publishers. This valuable dictionary was created and is maintained by
 the Kurator project (\url{http://kurator.acis.ufl.edu/kurator-web/}),
 which provides workflow tools for data quality improvement of
-biodiversity data, via a user-friendly web interface. See
-\protect\hyperlink{the-kurator-project}{The Kurator project} section for
-more information.
+biodiversity data, via a user-friendly web interface.
 
-\subsubsection*{Updating the Darwin Cloud
-dictionary}\label{updating-the-darwin-cloud-dictionary}
-\addcontentsline{toc}{subsubsection}{Updating the Darwin Cloud
-dictionary}
+\subsubsection*{Updating the Darwin
+Cloud}\label{updating-the-darwin-cloud}
+\addcontentsline{toc}{subsubsection}{Updating the Darwin Cloud}
 
 It's recommended to update the Darwin Cloud file. This can be done
 easily by clicking the \textbf{Update DC} button.
@@ -367,11 +368,62 @@ data}\label{download-your-darwinized-data}
 
 \section{Closing the app}\label{closing-the-app}
 
+\section{References}\label{references}
+
 \chapter{Command line operations}\label{command-line-operations}
 
 \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
-operations \texttt{bdDwC} from the command line
+\section{Load package}\label{load-package}
+
+Load the \texttt{bdDwC} package
+
+\begin{Shaded}
+\begin{Highlighting}[]
+    \KeywordTok{library}\NormalTok{(bdDwC)}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Darwinizing a dataset}\label{darwinizing-a-dataset}
+
+\texttt{bdDwC} contains Indian Reptile dataset
+\texttt{bdDwC:::dataReptiles}.
+
+The function to Darwinize a dataset is\texttt{darwinizeNames} (replace
+\texttt{bdDwC:::dataReptiles} with wanted dataset):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{result <-}\StringTok{ }\KeywordTok{darwinizeNames}\NormalTok{(}\DataTypeTok{dataUser =}\NormalTok{ bdDwC}\OperatorTok{:::}\NormalTok{dataReptiles,}
+                            \DataTypeTok{dataDWC   =}\NormalTok{ bdDwC}\OperatorTok{:::}\NormalTok{dataDarwinCloud}\OperatorTok{$}\NormalTok{data)}
+\end{Highlighting}
+\end{Shaded}
+
+You can replace \texttt{bdDwC:::dataReptiles} with your dataset
+
+Rename your dataset field names to Darwinized names using
+\texttt{renameUserData}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{renameUserData}\NormalTok{(bdDwC}\OperatorTok{:::}\NormalTok{dataReptiles, result)}
+\end{Highlighting}
+\end{Shaded}
+
+\section{\texorpdfstring{Updating
+\protect\hyperlink{the-darwin-cloud-dictionary}{the Darwin Cloud
+dictionary}}{Updating the Darwin Cloud dictionary}}\label{updating-the-darwin-cloud-dictionary}
+
+To get newest version of Darwin Cloud Data run:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{downloadCloudData}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+which will download data from the remote repository and extract field
+and standard names.
 
 \chapter{Examples}\label{examples}
 
@@ -379,7 +431,7 @@ operations \texttt{bdDwC} from the command line
 
 \textbf{{{[} TBA {]}}}
 
-I was thinking to show the Darwinizer app with four distinct datasets:
+I'm thinking to show the Darwinizer app with four distinct datasets:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -394,15 +446,23 @@ I was thinking to show the Darwinizer app with four distinct datasets:
   GBIF dataset
 \end{enumerate}
 
+\chapter{References}\label{references-1}
+
 \chapter{Getting your feedback}\label{getting-your-feedback}
 
 \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
 Loading\ldots{}
 
-\section{Bug report}\label{bug-report}
+\section{Report a bug}\label{report-a-bug}
 
-\section{Join us}\label{join-us}
+Submit an issue at \url{https://github.com/bd-R/bdDwC/issues}
+
+\section{Contribute}\label{contribute}
+
+Contribute: \url{https://github.com/bd-R/bdDwC}
+
+Join: \url{https://bd-r-group.slack.com}
 
 \chapter{\texorpdfstring{\texttt{bdDwC}
 citation}{bdDwC citation}}\label{bddwc-citation}
@@ -438,10 +498,25 @@ Core}\label{learn-more-about-darwin-core}
 
 \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
-\hypertarget{the-kurator-project}{\section{The Kurator
-project}\label{the-kurator-project}}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://github.com/tdwg/dwc-qa/wiki/Webinars\%20target=\%22_blank\%22}{Darwin
+  Core Hour webinar series}
+\item
+  \href{https://github.com/tdwg/dwc-qa/wiki\%20target=\%22_blank\%22}{The
+  Darwin Core Questions \& Answers wiki}
+\item
+  \href{https://www.gbif.org/darwin-core\%20target=\%22_blank\%22}{GBIF:
+  What is Darwin Core, and why does it matter?}
+\item
+  Darwin Core: An Evolving Community-Developed Biodiversity Data
+  Standard \citep{DwC-paper}
+\end{itemize}
 
-\bibliography{book.bib,bib/DarwinCloud.bib}
+\section{References}\label{references-2}
+
+\bibliography{bib/book.bib,bib/DarwinCloud.bib,bib/DwC-paper.bib}
 
 
 \end{document}
