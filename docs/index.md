@@ -32,5 +32,5 @@ Running the Darwinizer enables you to standardize many field names in your datas
 
 [![](img/GSoC.png "GSoC website")](https://summerofcode.withgoogle.com/ target="_blank")  
 
-[See the GSoC project idea page](https://github.com/rstats-gsoc/gsoc2018/wiki/Darwinazing-biodiversity-data-in-R)
+[See the GSoC project idea page](https://github.com/rstats-gsoc/gsoc2018/wiki/Darwinazing-biodiversity-data-in-R target="_blank")
 
