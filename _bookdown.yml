@@ -1,6 +1,6 @@
 book_filename: "bdDwC-guide"
 chapter_name: ""
-repo: https://github.com/tom-gu/bdDwC-guide
+repo: https://github.com/bd-R/bdDwC-guide
 output_dir: docs
 #rmd_files: ["index.Rmd", "01-Introduction.Rmd", "02-Diving-In.Rmd"]
 clean: [packages.bib, bookdown.bbl]

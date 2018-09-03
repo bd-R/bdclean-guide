@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>bdDwC User Guide</title>
+  <meta name="description" content="Darwinize your data: field names conversion to Darwin Core (DwC) format">
+  <meta name="generator" content="bookdown <!--bookdown:version--> and GitBook 2.6.7">
+
+  <meta property="og:title" content="bdDwC User Guide" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://bd-r.github.io/bdDwC-guide/" />
+  
+  <meta property="og:description" content="Darwinize your data: field names conversion to Darwin Core (DwC) format" />
+  <meta name="github-repo" content="bd-R/bdDwC-guide" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="bdDwC User Guide" />
+  
+  <meta name="twitter:description" content="Darwinize your data: field names conversion to Darwin Core (DwC) format" />
+  
+
+<meta name="author" content="Authors: TBA">
+
+
+<meta name="date" content="2018-09-04">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<!--bookdown:link_prev-->
+<!--bookdown:link_next-->
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+pre, code { background-color: #f8f8f8; }
+code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code > span.dt { color: #204a87; } /* DataType */
+code > span.dv { color: #0000cf; } /* DecVal */
+code > span.bn { color: #0000cf; } /* BaseN */
+code > span.fl { color: #0000cf; } /* Float */
+code > span.ch { color: #4e9a06; } /* Char */
+code > span.st { color: #4e9a06; } /* String */
+code > span.co { color: #8f5902; font-style: italic; } /* Comment */
+code > span.ot { color: #8f5902; } /* Other */
+code > span.al { color: #ef2929; } /* Alert */
+code > span.fu { color: #000000; } /* Function */
+code > span.er { color: #a40000; font-weight: bold; } /* Error */
+code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #000000; } /* SpecialChar */
+code > span.vs { color: #4e9a06; } /* VerbatimString */
+code > span.ss { color: #4e9a06; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #000000; } /* Variable */
+code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code > span.ex { } /* Extension */
+code > span.at { color: #c4a000; } /* Attribute */
+code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+<!--bookdown:title:start-->
+<div id="header">
+<h1 class="title"><code>bdDwC</code> User Guide</h1>
+<h4 class="author"><em>Authors: TBA</em></h4>
+<h4 class="date"><em>2018-09-04</em></h4>
+</div>
+<!--bookdown:title:end-->
+
+<!--bookdown:toc:start-->
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+<!--bookdown:toc2:start-->
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#installing-bddwc"><span class="toc-section-number">1</span> Installing <code>bdDwC</code></a><ul>
+<li><a href="#stable-version-from-cran"><span class="toc-section-number">1.1</span> Stable version from CRAN</a></li>
+<li><a href="#development-version-from-github"><span class="toc-section-number">1.2</span> Development version from GitHub</a></li>
+<li><a href="#possible-problems-solutions"><span class="toc-section-number">1.3</span> Possible problems &amp; solutions</a><ul>
+<li><a href="#section"><span class="toc-section-number">1.3.1</span> ???</a></li>
+<li><a href="#section-1"><span class="toc-section-number">1.3.2</span> ????</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#the-shiny-app"><span class="toc-section-number">2</span> The shiny app</a><ul>
+<li><a href="#launching-the-app"><span class="toc-section-number">2.1</span> Launching the app</a></li>
+<li><a href="#app-overview"><span class="toc-section-number">2.2</span> App overview</a></li>
+<li><a href="#data-upload"><span class="toc-section-number">2.3</span> Data upload</a><ul>
+<li><a href="#from-a-local-file"><span class="toc-section-number">2.3.1</span> From a local file</a></li>
+<li><a href="#from-an-online-database"><span class="toc-section-number">2.3.2</span> From an online database</a></li>
+</ul></li>
+<li><a href="#dictionaries"><span class="toc-section-number">2.4</span> Dictionaries</a><ul>
+<li><a href="#the-darwin-cloud-dictionary"><span class="toc-section-number">2.4.1</span> The Darwin Cloud dictionary</a></li>
+<li><a href="#your-own-dictionary"><span class="toc-section-number">2.4.2</span> Your own dictionary</a></li>
+</ul></li>
+<li><a href="#darwinizing-your-dataset"><span class="toc-section-number">2.5</span> Darwinizing your dataset</a></li>
+<li><a href="#darwinizer-results"><span class="toc-section-number">2.6</span> Darwinizer results</a><ul>
+<li><a href="#results-page-overwiew"><span class="toc-section-number">2.6.1</span> Results page overwiew</a></li>
+</ul></li>
+<li><a href="#download-your-darwinized-data"><span class="toc-section-number">2.7</span> Download your Darwinized data</a></li>
+<li><a href="#closing-the-app"><span class="toc-section-number">2.8</span> Closing the app</a></li>
+<li><a href="#references"><span class="toc-section-number">2.9</span> References</a></li>
+</ul></li>
+<li><a href="#command-line-operations"><span class="toc-section-number">3</span> Command line operations</a><ul>
+<li><a href="#load-package"><span class="toc-section-number">3.1</span> Load package</a></li>
+<li><a href="#darwinizing-a-dataset"><span class="toc-section-number">3.2</span> Darwinizing a dataset</a></li>
+<li><a href="#updating-the-darwin-cloud-dictionary"><span class="toc-section-number">3.3</span> Updating <a href="#the-darwin-cloud-dictionary">the Darwin Cloud dictionary</a></a></li>
+</ul></li>
+<li><a href="#examples"><span class="toc-section-number">4</span> Examples</a></li>
+<li><a href="#getting-your-feedback"><span class="toc-section-number">5</span> Getting your feedback</a><ul>
+<li><a href="#report-a-bug"><span class="toc-section-number">5.1</span> Report a bug</a></li>
+<li><a href="#contribute"><span class="toc-section-number">5.2</span> Contribute</a></li>
+</ul></li>
+<li><a href="#bddwc-citation"><span class="toc-section-number">6</span> <code>bdDwC</code> citation</a></li>
+<li><a href="#learn-more-about-darwin-core"><span class="toc-section-number">7</span> Learn more about Darwin Core</a></li>
+</ul>
+<!--bookdown:toc2:end-->
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><code>bdDwC</code> User Guide</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<!--bookdown:toc:end-->
+<!--bookdown:body:start-->
+<div id="introduction" class="section level1 unnumbered">
+<h1>Introduction</h1>
+<p><code>bdDwC</code> is an R package that supplies a Shiny app and a set of functions for standardizing field names according to the Darwin Core (DwC) format. <code>bdDwC</code> is a key element in the <code>bdverse</code>– a collection of tools, that form a general framework for facilitating biodiversity science in R.</p>
+<div class="figure">
+<img src="img/bdDwC_bdverse.png" title="bdDwC-bdverse" alt="bdDwC in the bdverse" />
+<p class="caption">bdDwC in the bdverse</p>
+</div>
+<div id="what-is-the-darwin-core-standard" class="section level4 unnumbered">
+<h4>What is the Darwin Core standard?</h4>
+<p>Darwin Core (DwC) is a global standard for publishing biodiversity data, whose goal is to facilitate the sharing of biodiversity information, by providing identifiers, labels, and definitions <span class="citation">(Wieczorek <a href="#ref-DwC-paper">2012</a>)</span>. DwC was established as an evolving community-developed standard, by the Biodiversity Information Standards Working Group (www.tdwg.org). DwC is a library of definitions of common biodiversity data terms, each of which represents a field within the database. There are around 200 such fields (not including DwC extensions); a full set of the DwC terms with their descriptions is available in the Quick Reference Guide (<a href="http://rs.tdwg.org/dwc/terms" class="uri">http://rs.tdwg.org/dwc/terms</a>). For more information see section <a href="#learn-more-about-darwin-core">6</a>.</p>
+</div>
+<div id="why-its-important-to-darwinize-a-dataset" class="section level4 unnumbered">
+<h4>Why it’s important to “Darwinize” a dataset</h4>
+<p>Running the Darwinizer enables you to standardize many field names in your dataset – and that allows the <code>bdverse</code> to handle data from various biodiversity portals, and lets you enjoy all of <code>bdvers</code> features, regardless of publishers variation in field names.</p>
+</div>
+<div id="fundings" class="section level4 unnumbered">
+<h4>Fundings</h4>
+<div class="figure">
+<img src="img/ISF.png" title="ISF" />
+
+</div>
+<p><a href="https://summerofcode.withgoogle.com/%20target=%22_blank%22"><img src="img/GSoC.png" title="GSoC website" /></a></p>
+<p><a href="https://github.com/rstats-gsoc/gsoc2018/wiki/Darwinazing-biodiversity-data-in-R">See the GSoC project idea page</a></p>
+<!--chapter:end:index.Rmd-->
+</div>
+</div>
+<div id="installing-bddwc" class="section level1">
+<h1><span class="header-section-number">1</span> Installing <code>bdDwC</code></h1>
+<p>Placeholder</p>
+<div id="stable-version-from-cran" class="section level2">
+<h2><span class="header-section-number">1.1</span> Stable version from CRAN</h2>
+</div>
+<div id="development-version-from-github" class="section level2">
+<h2><span class="header-section-number">1.2</span> Development version from GitHub</h2>
+</div>
+<div id="possible-problems-solutions" class="section level2">
+<h2><span class="header-section-number">1.3</span> Possible problems &amp; solutions</h2>
+<div id="section" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> ???</h3>
+</div>
+<div id="section-1" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> ????</h3>
+<!--chapter:end:01-Installation.Rmd-->
+</div>
+</div>
+</div>
+<div id="the-shiny-app" class="section level1">
+<h1><span class="header-section-number">2</span> The shiny app</h1>
+<p>Placeholder</p>
+<div id="launching-the-app" class="section level2">
+<h2><span class="header-section-number">2.1</span> Launching the app</h2>
+</div>
+<div id="app-overview" class="section level2">
+<h2><span class="header-section-number">2.2</span> App overview</h2>
+</div>
+<div id="data-upload" class="section level2">
+<h2><span class="header-section-number">2.3</span> Data upload</h2>
+<div id="from-a-local-file" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> From a local file</h3>
+</div>
+<div id="from-an-online-database" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> From an online database</h3>
+</div>
+</div>
+<div id="dictionaries" class="section level2">
+<h2><span class="header-section-number">2.4</span> Dictionaries</h2>
+<div id="the-darwin-cloud-dictionary" class="section level3">
+<h3><span class="header-section-number">2.4.1</span> The Darwin Cloud dictionary</h3>
+<div id="updating-the-darwin-cloud" class="section level4 unnumbered">
+<h4>Updating the Darwin Cloud</h4>
+</div>
+</div>
+<div id="your-own-dictionary" class="section level3">
+<h3><span class="header-section-number">2.4.2</span> Your own dictionary</h3>
+</div>
+</div>
+<div id="darwinizing-your-dataset" class="section level2">
+<h2><span class="header-section-number">2.5</span> Darwinizing your dataset</h2>
+</div>
+<div id="darwinizer-results" class="section level2">
+<h2><span class="header-section-number">2.6</span> Darwinizer results</h2>
+<div id="results-page-overwiew" class="section level3">
+<h3><span class="header-section-number">2.6.1</span> Results page overwiew</h3>
+</div>
+</div>
+<div id="download-your-darwinized-data" class="section level2">
+<h2><span class="header-section-number">2.7</span> Download your Darwinized data</h2>
+</div>
+<div id="closing-the-app" class="section level2">
+<h2><span class="header-section-number">2.8</span> Closing the app</h2>
+</div>
+<div id="references" class="section level2">
+<h2><span class="header-section-number">2.9</span> References</h2>
+<!--chapter:end:02-Shiny-app.Rmd-->
+</div>
+</div>
+<div id="command-line-operations" class="section level1">
+<h1><span class="header-section-number">3</span> Command line operations</h1>
+<p>Placeholder</p>
+<div id="load-package" class="section level2">
+<h2><span class="header-section-number">3.1</span> Load package</h2>
+</div>
+<div id="darwinizing-a-dataset" class="section level2">
+<h2><span class="header-section-number">3.2</span> Darwinizing a dataset</h2>
+</div>
+<div id="updating-the-darwin-cloud-dictionary" class="section level2">
+<h2><span class="header-section-number">3.3</span> Updating <a href="#the-darwin-cloud-dictionary">the Darwin Cloud dictionary</a></h2>
+<!--chapter:end:03-Command-line.Rmd-->
+</div>
+</div>
+<div id="examples" class="section level1">
+<h1><span class="header-section-number">4</span> Examples</h1>
+<hr />
+<p><strong><span style="color:red">[ TBA ]</span></strong></p>
+<p>I’m thinking to show the Darwinizer app with four distinct datasets:</p>
+<ol style="list-style-type: decimal">
+<li>ALA dataset in DwC format</li>
+<li>ALA dataset in legacy format</li>
+<li>VertNet dataset</li>
+<li>GBIF dataset</li>
+</ol>
+<!--chapter:end:04-Examples.Rmd-->
+</div>
+<div id="getting-your-feedback" class="section level1">
+<h1><span class="header-section-number">5</span> Getting your feedback</h1>
+<hr />
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfloitsZiLj87zCnV8VLRjSSxf1z16i6AHUTzcyiVhXwbROOw/viewform?embedded=true" width="640" height="1056" frameborder="0" marginheight="0" marginwidth="0">
+Loading…
+</iframe>
+<div id="report-a-bug" class="section level2">
+<h2><span class="header-section-number">5.1</span> Report a bug</h2>
+<p>Submit an issue at <a href="https://github.com/bd-R/bdDwC/issues" class="uri">https://github.com/bd-R/bdDwC/issues</a></p>
+</div>
+<div id="contribute" class="section level2">
+<h2><span class="header-section-number">5.2</span> Contribute</h2>
+<p>Contribute: <a href="https://github.com/bd-R/bdDwC" class="uri">https://github.com/bd-R/bdDwC</a></p>
+<p>Join: <a href="https://bd-r-group.slack.com" class="uri">https://bd-r-group.slack.com</a></p>
+<!--chapter:end:20-Feedback.Rmd-->
+</div>
+</div>
+<div id="bddwc-citation" class="section level1">
+<h1><span class="header-section-number">6</span> <code>bdDwC</code> citation</h1>
+<hr />
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">citation</span>(<span class="st">&quot;bdDwC&quot;</span>)</code></pre></div>
+<pre><code>## 
+## To cite package &#39;bdDwC&#39; in publications use:
+## 
+##   Povilas Gibas, Tomer Gueta, Vijay Barve, Thiloshon Nagarajah and
+##   Yohay Carmel (2018). bdDwC: Darwinizer: Darwin Core (DwC) Field
+##   Names Standardization. R package version 0.1.15.
+## 
+## A BibTeX entry for LaTeX users is
+## 
+##   @Manual{,
+##     title = {bdDwC: Darwinizer: Darwin Core (DwC) Field Names Standardization},
+##     author = {Povilas Gibas and Tomer Gueta and Vijay Barve and Thiloshon Nagarajah and Yohay Carmel},
+##     year = {2018},
+##     note = {R package version 0.1.15},
+##   }</code></pre>
+<!--chapter:end:30-Citation.Rmd-->
+</div>
+<div id="learn-more-about-darwin-core" class="section level1">
+<h1><span class="header-section-number">7</span> Learn more about Darwin Core</h1>
+<hr />
+<ul>
+<li><p><strong><a href="https://github.com/tdwg/dwc-qa%20target=%22_blank%22">The Darwin Core Questions &amp; Answers Site</a></strong></p></li>
+<li><p><strong><a href="https://github.com/tdwg/dwc-qa/wiki/Webinars%20target=%22_blank%22">Darwin Core Hour webinar series</a></strong></p></li>
+<li><p><strong><a href="https://github.com/tdwg/dwc-qa/wiki%20target=%22_blank%22">The Darwin Core Questions &amp; Answers wiki</a></strong></p></li>
+<li><p><strong><a href="https://www.gbif.org/darwin-core%20target=%22_blank%22">GBIF: What is Darwin Core, and why does it matter?</a></strong></p></li>
+<li><p><strong><a href="https://doi.org/10.1371/journal.pone.0029715%20target=%22_blank%22">Darwin Core: An Evolving Community-Developed Biodiversity Data Standard</a> <span class="citation">(Wieczorek <a href="#ref-DwC-paper">2012</a>)</span> </strong></p></li>
+</ul>
+<div id="references-1" class="section level4 unnumbered">
+<h4>References</h4>
+<!--chapter:end:40-Learn.Rmd-->
+<div id="refs" class="references">
+<div id="ref-DwC-paper">
+<p>Wieczorek, David AND Guralnick, John AND Bloom. 2012. “Darwin Core: An Evolving Community-Developed Biodiversity Data Standard.” <em>PLOS ONE</em> 7 (1). Public Library of Science: 1–8. doi:<a href="https://doi.org/10.1371/journal.pone.0029715">10.1371/journal.pone.0029715</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<!--bookdown:body:end-->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<!--bookdown:link_prev-->
+<!--bookdown:link_next-->
+    </div>
+  </div>
+<!--bookdown:config-->
+
+</body>
+
+</html>
