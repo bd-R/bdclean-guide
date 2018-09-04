@@ -1,0 +1,17 @@
+# Examples
+
+***
+
+## Stable version from CRAN
+
+[comment]: <> (Need-To-Be-Updated!)
+
+```r
+# The easiest way to get bdDwC is to install the whole bdverse:
+install.packages("bdverse")
+```
+
+```r
+# Alternatively, install just bdDwC:
+install.packages("bdDwC")
+```

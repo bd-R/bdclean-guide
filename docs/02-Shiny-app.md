@@ -11,7 +11,7 @@ runDwC() # Launch the app
 
 ## App overview
 
-**<span style="color:red">[ Need To Be Updated! ]</span>**
+[comment]: <> (Need-To-Be-Updated!)
 
 ![bdDwC App Overview](img/bdDwC_Getting_started.png "The first screen")
 
@@ -23,10 +23,8 @@ runDwC() # Launch the app
 
 A CSV file or a Darwin Core Archive (DwC-A) zip file can be uploaded.
 
-**Local file size cannot exceed <span style="color:red">1GB [?]</span>**
 
-
-**<span style="color:red">[ Need To Be Updated! ]</span>**
+[comment]: <> (Need-To-Be-Updated!)
 
 ![Data upload from a local file](img/bdDwC_Up-local_file.png "bdDwC-app data-upload-local")
  
@@ -41,7 +39,7 @@ Also, data can be retrieved directly from various online biodiversity databases.
 * Check the box if records must have coordinates.
 * Wait for data to be downloaded.
 
-**<span style="color:red">[ Need To Be Updated! ]</span>**
+[comment]: <> (Need-To-Be-Updated!)
 
 ![Data upload from online biodiversity databases](img/bdDwC_Up-database.png "bdDwC-app data-upload-database")
 
@@ -59,7 +57,7 @@ The Darwin Cloud dictionary [@DarwinCloud], is a lookup table that accumulates d
 
 It's recommended to update the Darwin Cloud file. This can be done easily by clicking the **Update DC** button.
 
-**<span style="color:red">[ Need To Be Updated! ]</span>**
+[comment]: <> (Need-To-Be-Updated!)
 
 ![Updating the Darwin Cloud](img/bdDwC_update-DC.png "bdDwC-app bdDwC_update-DC")
 
@@ -67,7 +65,7 @@ It's recommended to update the Darwin Cloud file. This can be done easily by cli
 
 It's also possible to add your own dictionary by simply creating a CSV file with two columns, one for the Field Names and one for the Standard Names.
 
-**<span style="color:red">[ Need To Be Updated! ]</span>**
+[comment]: <> (Need-To-Be-Updated!)
 
 ![Uploading your own dictionary](img/bdDwC_personal_dictionary.png "bdDwC-app personal dictionary")
 
@@ -75,7 +73,7 @@ It's also possible to add your own dictionary by simply creating a CSV file with
 
 Once a dataset is uploaded, the 'Submit to Darwinizer' button is activated, Clicking it will Darwinize the dataset.
 
-**<span style="color:red">[ Need To Be Updated! ]</span>**
+[comment]: <> (Need-To-Be-Updated!)
 
 ![Submit to Darwinizer button](img/bdDwC_Submit.png "bdDwC-app Submit button")
 
@@ -83,13 +81,13 @@ Once a dataset is uploaded, the 'Submit to Darwinizer' button is activated, Clic
 
 ### Results page overwiew
 
-**<span style="color:red">[ Need To Be Updated! ]</span>**
+[comment]: <> (Need-To-Be-Updated!)
 
 ![Darwinizer results](img/bdDwC_Darwinizer_results.png "bdDwC-app Darwinizer results")
 
 Manually renaming field names can be done very easily, just choose the two corresponding fields and click the Rename button. 
 
-**<span style="color:red">[ Need To Be Updated! ]</span>**
+[comment]: <> (Need-To-Be-Updated!)
 
 ![Manually renaming fields](img/bdDwC_Manual_rename.png "bdDwC-app Manual renaming")
 
@@ -99,7 +97,7 @@ Hovering over a DwC standard name will display its description.
 
 ## Download your Darwinized data
 
-**<span style="color:red">[ Need To Be Updated! ]</span>**
+[comment]: <> (Need-To-Be-Updated!)
 
 ## Closing the app
 Just close the app browser tab, and the R session will be terminated. To reopen it run in the R Console `runDwC()`.

@@ -14,13 +14,13 @@
 \contentsline {section}{\numberline {2.3}Data upload}{9}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}From a local file}{9}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}From an online database}{9}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Dictionaries}{11}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}The Darwin Cloud dictionary}{11}{subsection.2.4.1}
-\contentsline {subsubsection}{Updating the Darwin Cloud}{11}{section*.6}
-\contentsline {subsection}{\numberline {2.4.2}Your own dictionary}{11}{subsection.2.4.2}
-\contentsline {section}{\numberline {2.5}Darwinizing your dataset}{11}{section.2.5}
-\contentsline {section}{\numberline {2.6}Darwinizer results}{11}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Results page overwiew}{11}{subsection.2.6.1}
+\contentsline {section}{\numberline {2.4}Dictionaries}{12}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}The Darwin Cloud dictionary}{12}{subsection.2.4.1}
+\contentsline {subsubsection}{Updating the Darwin Cloud}{12}{section*.6}
+\contentsline {subsection}{\numberline {2.4.2}Your own dictionary}{12}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}Darwinizing your dataset}{13}{section.2.5}
+\contentsline {section}{\numberline {2.6}Darwinizer results}{13}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Results page overwiew}{13}{subsection.2.6.1}
 \contentsline {section}{\numberline {2.7}Download your Darwinized data}{14}{section.2.7}
 \contentsline {section}{\numberline {2.8}Closing the app}{14}{section.2.8}
 \contentsline {section}{\numberline {2.9}References}{14}{section.2.9}

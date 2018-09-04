@@ -1,6 +1,6 @@
 --- 
 title: "`bdDwC` User Guide"
-author: "Authors: TBA"
+author: "Authors: Tomer Gueta and Povilas Gibas"
 date: "2018-09-04"
 site: bookdown::bookdown_site
 documentclass: book

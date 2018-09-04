@@ -1,6 +1,6 @@
 --- 
 title: "`bdDwC` User Guide"
-author: "Authors: TBA"
+author: "Authors: Tomer Gueta and Povilas Gibas"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book

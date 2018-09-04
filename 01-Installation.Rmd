@@ -1,17 +1,11 @@
 # Installing `bdDwC`
 
 ***
-
 ## Stable version from CRAN
 
-**<span style="color:red">[ Need To Be Updated! ]</span>**
-```r
-# The easiest way to get bdDwC is to install the whole bdverse:
-install.packages("bdverse")
-```
+[comment]: <> (Need-To-Be-Updated!)
 
 ```r
-# Alternatively, install just bdDwC:
 install.packages("bdDwC")
 ```
 

@@ -25,7 +25,7 @@
 \usepackage{hyperref}
 \hypersetup{unicode=true,
             pdftitle={bdDwC User Guide},
-            pdfauthor={Authors: TBA},
+            pdfauthor={Authors: Tomer Gueta and Povilas Gibas},
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
@@ -120,7 +120,7 @@
   \title{\texttt{bdDwC} User Guide}
     \pretitle{\vspace{\droptitle}\centering\huge}
   \posttitle{\par}
-    \author{Authors: TBA}
+    \author{Authors: Tomer Gueta and Povilas Gibas}
     \preauthor{\centering\large\emph}
   \postauthor{\par}
       \predate{\centering\large\emph}
@@ -202,7 +202,7 @@ features, regardless of publishers variation in field names.
 
 \href{https://summerofcode.withgoogle.com/\%20target=\%22_blank\%22}{\includegraphics{img/GSoC.png}}
 
-\href{https://github.com/rstats-gsoc/gsoc2018/wiki/Darwinazing-biodiversity-data-in-R}{See
+\href{https://github.com/rstats-gsoc/gsoc2018/wiki/Darwinazing-biodiversity-data-in-R\%20target=\%22_blank\%22}{See
 the GSoC project idea page}
 
 \chapter{\texorpdfstring{Installing
@@ -212,18 +212,8 @@ the GSoC project idea page}
 
 \section{Stable version from CRAN}\label{stable-version-from-cran}
 
-\textbf{{{[} Need To Be Updated! {]}}}
-
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{# The easiest way to get bdDwC is to install the whole bdverse:}
-\KeywordTok{install.packages}\NormalTok{(}\StringTok{"bdverse"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{# Alternatively, install just bdDwC:}
 \KeywordTok{install.packages}\NormalTok{(}\StringTok{"bdDwC"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
@@ -269,8 +259,6 @@ TBA
 
 \section{App overview}\label{app-overview}
 
-\textbf{{{[} Need To Be Updated! {]}}}
-
 \begin{figure}
 \centering
 \includegraphics{img/bdDwC_Getting_started.png}
@@ -285,10 +273,6 @@ data; choose dictionary and run the Darwinizer.
 \subsection{From a local file}\label{from-a-local-file}
 
 A CSV file or a Darwin Core Archive (DwC-A) zip file can be uploaded.
-
-\textbf{Local file size cannot exceed {1GB {[}?{]}}}
-
-\textbf{{{[} Need To Be Updated! {]}}}
 
 \begin{figure}
 \centering
@@ -314,8 +298,6 @@ databases. You need only to:
 \item
   Wait for data to be downloaded.
 \end{itemize}
-
-\textbf{{{[} Need To Be Updated! {]}}}
 
 \begin{figure}
 \centering
@@ -349,8 +331,6 @@ Cloud}\label{updating-the-darwin-cloud}
 It's recommended to update the Darwin Cloud file. This can be done
 easily by clicking the \textbf{Update DC} button.
 
-\textbf{{{[} Need To Be Updated! {]}}}
-
 \begin{figure}
 \centering
 \includegraphics{img/bdDwC_update-DC.png}
@@ -363,8 +343,6 @@ It's also possible to add your own dictionary by simply creating a CSV
 file with two columns, one for the Field Names and one for the Standard
 Names.
 
-\textbf{{{[} Need To Be Updated! {]}}}
-
 \begin{figure}
 \centering
 \includegraphics{img/bdDwC_personal_dictionary.png}
@@ -376,8 +354,6 @@ Names.
 Once a dataset is uploaded, the `Submit to Darwinizer' button is
 activated, Clicking it will Darwinize the dataset.
 
-\textbf{{{[} Need To Be Updated! {]}}}
-
 \begin{figure}
 \centering
 \includegraphics{img/bdDwC_Submit.png}
@@ -388,8 +364,6 @@ activated, Clicking it will Darwinize the dataset.
 
 \subsection{Results page overwiew}\label{results-page-overwiew}
 
-\textbf{{{[} Need To Be Updated! {]}}}
-
 \begin{figure}
 \centering
 \includegraphics{img/bdDwC_Darwinizer_results.png}
@@ -398,8 +372,6 @@ activated, Clicking it will Darwinize the dataset.
 
 Manually renaming field names can be done very easily, just choose the
 two corresponding fields and click the Rename button.
-
-\textbf{{{[} Need To Be Updated! {]}}}
 
 \begin{figure}
 \centering
@@ -411,8 +383,6 @@ Hovering over a DwC standard name will display its description.
 
 \section{Download your Darwinized
 data}\label{download-your-darwinized-data}
-
-\textbf{{{[} Need To Be Updated! {]}}}
 
 \section{Closing the app}\label{closing-the-app}
 
@@ -481,21 +451,6 @@ and standard names.
 \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
 \textbf{{{[} TBA {]}}}
-
-I'm thinking to show the Darwinizer app with four distinct datasets:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  ALA dataset in DwC format
-\item
-  ALA dataset in legacy format
-\item
-  VertNet dataset
-\item
-  GBIF dataset
-\end{enumerate}
 
 \chapter{Getting your feedback}\label{getting-your-feedback}
 
