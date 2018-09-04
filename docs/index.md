@@ -1,7 +1,7 @@
 --- 
 title: "`bdDwC` User Guide"
 author: "Authors: Tomer Gueta and Povilas Gibas"
-date: "2018-09-04"
+date: "built on 2018-09-04 - for bdDwC v0.1.15"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [bib/book.bib, bib/DarwinCloud.bib, bib/DwC-paper.bib]
