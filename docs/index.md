@@ -1,30 +1,34 @@
 --- 
-title: "`bdDwC` User Guide"
-author: "Authors: Tomer Gueta and Povilas Gibas"
-date: "built on 2018-09-04 - for bdDwC v0.1.15"
+title: "`bdclean` User Guide"
+author: "Authors: Tomer Gueta and Thiloshon Nagarajah"
+date: "2018-09-05"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [bib/book.bib, bib/DarwinCloud.bib, bib/DwC-paper.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: bd-R/bdDwC-guide
-url: 'http\://bd-r.github.io/bdDwC-guide/'
-description: "Darwinize your data: field names conversion to Darwin Core (DwC) format"
+github-repo: bd-R/bdclean-guide
+url: 'http\://bd-r.github.io/bdclean-guide/'
+description: ""
 ---
 
 # Introduction {-}
 
-`bdDwC` is an R package that supplies a Shiny app and a set of functions for standardizing field names according to the Darwin Core (DwC) format. `bdDwC` is a key element in the `bdverse`-- a collection of tools, that form a general framework for facilitating biodiversity science in R.
+`bdclean` is a user-friendly data cleaning Shiny app for the inexperienced R user. It provides features to manage complete workflow for biodiversity data cleaning, from uploading the data; gathering input from the user, in order to adjust cleaning procedures; perform the cleaning; and finally, generating various reports and several versions of the data.
+`bdclean` is part of [The bdverse](https://bd-r.github.io/The-bdverse/index.html){target="_blank"} -- a collection of tools, that form a general framework for facilitating biodiversity science in R.
 
-![bdDwC in the bdverse](img/bdDwC_bdverse.png "bdDwC-bdverse")
+![bdclean in the bdverse](img/bdclean_bdverse.png "bdclean-bdverse")
 
-#### What is the Darwin Core standard? {-}
+#### `bdclean` overview {-}
 
-Darwin Core (DwC) is a global standard for publishing biodiversity data, whose goal is to facilitate the sharing of biodiversity information, by providing identifiers, labels, and definitions [@DwC-paper]. DwC was established as an evolving community-developed standard, by the Biodiversity Information Standards Working Group (www.tdwg.org). DwC is a library of definitions of common biodiversity data terms, each of which represents a field within the database. There are around 200 such fields (not including DwC extensions); a full set of the DwC terms with their descriptions is available in the Quick Reference Guide (http://rs.tdwg.org/dwc/terms). For more information see section [6][Learn more about Darwin Core].
+![bdclean overview](img/bdclean_overview.png "bdclean-overview")
 
-#### Why it's important to "Darwinize" a dataset {-}
 
-Running the Darwinizer enables you to standardize many field names in your dataset -- and that allows the `bdverse` to handle data from various biodiversity portals, and lets you enjoy all of `bdvers` features, regardless of publishers variation in field names.
+bdclean workflow is comprised of three distinct mechanisms, user input, data cleaning and outputs. In most R packages this basic workflow (i.e. input; processing; output) operates via an R function. Functions are fundamental building blocks of R, and usually focus on very specific task. Users must understand and supply the function with its mandatory arguments (e.g. data in the specified format, setting of various function variables). Thus, in order to create a specific workflow, users must write an R script, which requires reasonable programing skills. bdclean avoids all that by creating a user-friendly Shiny app with questionnaire that collects the necessary user input.
+
+#### App overview{-}
+
+
 
 #### Fundings {-}
 
@@ -32,5 +36,5 @@ Running the Darwinizer enables you to standardize many field names in your datas
 
 [![](img/GSoC.png "GSoC website")](https://summerofcode.withgoogle.com/ target="_blank")  
 
-[See the GSoC project idea page](https://github.com/rstats-gsoc/gsoc2018/wiki/Darwinazing-biodiversity-data-in-R target="_blank")
+[See the GSoC project idea page](https://github.com/rstats-gsoc/gsoc2018/wiki/bdclean%3A-User-friendly-biodiversity-data-cleaning-pipeline target="_blank")
 

@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="installing-bdclean.html">
+<link rel="prev" href="data-cleaning-configuration.html">
+<link rel="next" href="artifacts-and-reports.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -168,37 +168,29 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title"><code>bdclean</code> User Guide</h1>
-<h4 class="author"><em>Authors: Tomer Gueta and Thiloshon Nagarajah</em></h4>
-<h4 class="date"><em>2018-09-05</em></h4>
+<div id="flag-and-clean-the-data" class="section level1">
+<h1><span class="header-section-number">4</span> Flag and clean the data</h1>
+<hr />
+<div id="load-package-1" class="section level2">
+<h2><span class="header-section-number">4.1</span> Load package</h2>
+<p>Load the <code>bdDwC</code> package</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">    <span class="kw">library</span>(bdDwC)</code></pre></div>
 </div>
-<div id="introduction" class="section level1 unnumbered">
-<h1>Introduction</h1>
-<p><code>bdclean</code> is a user-friendly data cleaning Shiny app for the inexperienced R user. It provides features to manage complete workflow for biodiversity data cleaning, from uploading the data; gathering input from the user, in order to adjust cleaning procedures; perform the cleaning; and finally, generating various reports and several versions of the data. <code>bdclean</code> is part of <a href="https://bd-r.github.io/The-bdverse/index.html" target="_blank">The bdverse</a> – a collection of tools, that form a general framework for facilitating biodiversity science in R.</p>
-<div class="figure">
-<img src="img/bdclean_bdverse.png" title="bdclean-bdverse" alt="bdclean in the bdverse" />
-<p class="caption">bdclean in the bdverse</p>
+<div id="darwinizing-a-dataset-1" class="section level2">
+<h2><span class="header-section-number">4.2</span> Darwinizing a dataset</h2>
+<p><code>bdDwC</code> contains Indian Reptile dataset <code>bdDwC:::dataReptiles</code>.</p>
+<p>The function to Darwinize a dataset is<code>darwinizeNames</code> (replace <code>bdDwC:::dataReptiles</code> with wanted dataset):</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">result &lt;-<span class="st"> </span><span class="kw">darwinizeNames</span>(<span class="dt">dataUser =</span> bdDwC<span class="op">:::</span>dataReptiles,
+                            <span class="dt">dataDWC   =</span> bdDwC<span class="op">:::</span>dataDarwinCloud<span class="op">$</span>data)</code></pre></div>
+<p>You can replace <code>bdDwC:::dataReptiles</code> with your dataset</p>
+<p>Rename your dataset field names to Darwinized names using <code>renameUserData</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">renameUserData</span>(bdDwC<span class="op">:::</span>dataReptiles, result)</code></pre></div>
 </div>
-<div id="bdclean-overview" class="section level4 unnumbered">
-<h4><code>bdclean</code> overview</h4>
-<div class="figure">
-<img src="img/bdclean_overview.png" title="bdclean-overview" alt="bdclean overview" />
-<p class="caption">bdclean overview</p>
-</div>
-<p>bdclean workflow is comprised of three distinct mechanisms, user input, data cleaning and outputs. In most R packages this basic workflow (i.e. input; processing; output) operates via an R function. Functions are fundamental building blocks of R, and usually focus on very specific task. Users must understand and supply the function with its mandatory arguments (e.g. data in the specified format, setting of various function variables). Thus, in order to create a specific workflow, users must write an R script, which requires reasonable programing skills. bdclean avoids all that by creating a user-friendly Shiny app with questionnaire that collects the necessary user input.</p>
-</div>
-<div id="app-overview" class="section level4 unnumbered">
-<h4>App overview</h4>
-</div>
-<div id="fundings" class="section level4 unnumbered">
-<h4>Fundings</h4>
-<div class="figure">
-<img src="img/ISF.png" title="ISF" />
-
-</div>
-<p><a href="https://summerofcode.withgoogle.com/%20target=%22_blank%22"><img src="img/GSoC.png" title="GSoC website" /></a></p>
-<p><a href="https://github.com/rstats-gsoc/gsoc2018/wiki/bdclean%3A-User-friendly-biodiversity-data-cleaning-pipeline%20target=%22_blank%22">See the GSoC project idea page</a></p>
+<div id="updating-the-darwin-cloud-dictionary-1" class="section level2">
+<h2><span class="header-section-number">4.3</span> Updating <a href="data-cleaning-configuration.html#the-darwin-cloud-dictionary">the Darwin Cloud dictionary</a></h2>
+<p>To get newest version of Darwin Cloud Data run:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">downloadCloudData</span>()</code></pre></div>
+<p>which will download data from the remote repository and extract field and standard names.</p>
 
 </div>
 </div>
@@ -207,8 +199,8 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-
-<a href="installing-bdclean.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="data-cleaning-configuration.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="artifacts-and-reports.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -238,7 +230,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/bd-R/bdclean-guide/edit/master/index.Rmd",
+"link": "https://github.com/bd-R/bdclean-guide/edit/master/04-flag-clean.Rmd",
 "text": "Edit"
 },
 "download": ["bdclean-guide.pdf", "bdclean-guide.epub"],

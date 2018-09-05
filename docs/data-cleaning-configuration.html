@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="installing-bdclean.html">
+<link rel="prev" href="add-data.html">
+<link rel="next" href="flag-and-clean-the-data.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -168,38 +168,112 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title"><code>bdclean</code> User Guide</h1>
-<h4 class="author"><em>Authors: Tomer Gueta and Thiloshon Nagarajah</em></h4>
-<h4 class="date"><em>2018-09-05</em></h4>
+<div id="data-cleaning-configuration" class="section level1">
+<h1><span class="header-section-number">3</span> Data cleaning configuration</h1>
+<hr />
+<div id="launching-the-app" class="section level2">
+<h2><span class="header-section-number">3.1</span> Launching the app</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(bdDwC) <span class="co"># Uplaod package library</span>
+<span class="kw">runDwC</span>() <span class="co"># Launch the app</span></code></pre></div>
 </div>
-<div id="introduction" class="section level1 unnumbered">
-<h1>Introduction</h1>
-<p><code>bdclean</code> is a user-friendly data cleaning Shiny app for the inexperienced R user. It provides features to manage complete workflow for biodiversity data cleaning, from uploading the data; gathering input from the user, in order to adjust cleaning procedures; perform the cleaning; and finally, generating various reports and several versions of the data. <code>bdclean</code> is part of <a href="https://bd-r.github.io/The-bdverse/index.html" target="_blank">The bdverse</a> – a collection of tools, that form a general framework for facilitating biodiversity science in R.</p>
+<div id="app-overview-1" class="section level2">
+<h2><span class="header-section-number">3.2</span> App overview</h2>
 <div class="figure">
-<img src="img/bdclean_bdverse.png" title="bdclean-bdverse" alt="bdclean in the bdverse" />
-<p class="caption">bdclean in the bdverse</p>
+<img src="img/bdDwC_Getting_started.png" title="The first screen" alt="bdDwC App Overview" />
+<p class="caption">bdDwC App Overview</p>
 </div>
-<div id="bdclean-overview" class="section level4 unnumbered">
-<h4><code>bdclean</code> overview</h4>
+<p>In the first screen, you’ll need to upload or download your biodiversity data; choose dictionary and run the Darwinizer.</p>
+</div>
+<div id="data-upload" class="section level2">
+<h2><span class="header-section-number">3.3</span> Data upload</h2>
+<div id="from-a-local-file" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> From a local file</h3>
+<p>A CSV file or a Darwin Core Archive (DwC-A) zip file can be uploaded.</p>
 <div class="figure">
-<img src="img/bdclean_overview.png" title="bdclean-overview" alt="bdclean overview" />
-<p class="caption">bdclean overview</p>
+<img src="img/bdDwC_Up-local_file.png" title="bdDwC-app data-upload-local" alt="Data upload from a local file" />
+<p class="caption">Data upload from a local file</p>
 </div>
-<p>bdclean workflow is comprised of three distinct mechanisms, user input, data cleaning and outputs. In most R packages this basic workflow (i.e. input; processing; output) operates via an R function. Functions are fundamental building blocks of R, and usually focus on very specific task. Users must understand and supply the function with its mandatory arguments (e.g. data in the specified format, setting of various function variables). Thus, in order to create a specific workflow, users must write an R script, which requires reasonable programing skills. bdclean avoids all that by creating a user-friendly Shiny app with questionnaire that collects the necessary user input.</p>
 </div>
-<div id="app-overview" class="section level4 unnumbered">
-<h4>App overview</h4>
-</div>
-<div id="fundings" class="section level4 unnumbered">
-<h4>Fundings</h4>
+<div id="from-an-online-database" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> From an online database</h3>
+<p>Also, data can be retrieved directly from various online biodiversity databases. You need only to:</p>
+<ul>
+<li>Select the database</li>
+<li>Specify the desired scientific name.</li>
+<li>Specify the number of records (upper limit of 50,000).</li>
+<li>Check the box if records must have coordinates.</li>
+<li>Wait for data to be downloaded.</li>
+</ul>
 <div class="figure">
-<img src="img/ISF.png" title="ISF" />
+<img src="img/bdDwC_Up-database.png" title="bdDwC-app data-upload-database" alt="Data upload from online biodiversity databases" />
+<p class="caption">Data upload from online biodiversity databases</p>
+</div>
+</div>
+</div>
+<div id="dictionaries" class="section level2">
+<h2><span class="header-section-number">3.4</span> Dictionaries</h2>
+<p>A dictionary is a key component when Darwinizing a dataset. It’s basically a lookup table that lists a possible variation of field name and it corresponding DwC name.</p>
+<div id="the-darwin-cloud-dictionary" class="section level3">
+<h3><span class="header-section-number">3.4.1</span> The Darwin Cloud dictionary</h3>
+<p>The Darwin Cloud dictionary <span class="citation">(Wieczorek et al. <a href="#ref-DarwinCloud">2017</a>)</span>, is a lookup table that accumulates different variations in DwC field names from different publishers. This valuable and critical dictionary was created and is maintained by the Kurator project (<a href="http://kurator.acis.ufl.edu/kurator-web/" class="uri">http://kurator.acis.ufl.edu/kurator-web/</a>), which provides workflow tools for data quality improvement of biodiversity data, via a user-friendly web interface. The development of bdDwC was inspired by <a href="https://github.com/kurator-org/kurator-validation/wiki/CSV-File-Darwinizer%20target=%22_blank%22">Kurator’s own Darwinizer</a>.</p>
+<div id="updating-the-darwin-cloud" class="section level4 unnumbered">
+<h4>Updating the Darwin Cloud</h4>
+<p>It’s recommended to update the Darwin Cloud file. This can be done easily by clicking the <strong>Update DC</strong> button.</p>
+<div class="figure">
+<img src="img/bdDwC_update-DC.png" title="bdDwC-app bdDwC_update-DC" alt="Updating the Darwin Cloud" />
+<p class="caption">Updating the Darwin Cloud</p>
+</div>
+</div>
+</div>
+<div id="your-own-dictionary" class="section level3">
+<h3><span class="header-section-number">3.4.2</span> Your own dictionary</h3>
+<p>It’s also possible to add your own dictionary by simply creating a CSV file with two columns, one for the Field Names and one for the Standard Names.</p>
+<div class="figure">
+<img src="img/bdDwC_personal_dictionary.png" title="bdDwC-app personal dictionary" alt="Uploading your own dictionary" />
+<p class="caption">Uploading your own dictionary</p>
+</div>
+</div>
+</div>
+<div id="darwinizing-your-dataset" class="section level2">
+<h2><span class="header-section-number">3.5</span> Darwinizing your dataset</h2>
+<p>Once a dataset is uploaded, the ‘Submit to Darwinizer’ button is activated, Clicking it will Darwinize the dataset.</p>
+<div class="figure">
+<img src="img/bdDwC_Submit.png" title="bdDwC-app Submit button" alt="Submit to Darwinizer button" />
+<p class="caption">Submit to Darwinizer button</p>
+</div>
+</div>
+<div id="darwinizer-results" class="section level2">
+<h2><span class="header-section-number">3.6</span> Darwinizer results</h2>
+<div id="results-page-overwiew" class="section level3">
+<h3><span class="header-section-number">3.6.1</span> Results page overwiew</h3>
+<div class="figure">
+<img src="img/bdDwC_Darwinizer_results.png" title="bdDwC-app Darwinizer results" alt="Darwinizer results" />
+<p class="caption">Darwinizer results</p>
+</div>
+<p>Manually renaming field names can be done very easily, just choose the two corresponding fields and click the Rename button.</p>
+<div class="figure">
+<img src="img/bdDwC_Manual_rename.png" title="bdDwC-app Manual renaming" alt="Manually renaming fields" />
+<p class="caption">Manually renaming fields</p>
+</div>
+<p>Hovering over a DwC standard name will display its description.</p>
+</div>
+</div>
+<div id="download-your-darwinized-data" class="section level2">
+<h2><span class="header-section-number">3.7</span> Download your Darwinized data</h2>
+</div>
+<div id="closing-the-app" class="section level2">
+<h2><span class="header-section-number">3.8</span> Closing the app</h2>
+<p>Just close the app browser tab, and the R session will be terminated. To reopen it run in the R Console <code>runDwC()</code>.</p>
+</div>
+<div id="references" class="section level2">
+<h2><span class="header-section-number">3.9</span> References</h2>
 
 </div>
-<p><a href="https://summerofcode.withgoogle.com/%20target=%22_blank%22"><img src="img/GSoC.png" title="GSoC website" /></a></p>
-<p><a href="https://github.com/rstats-gsoc/gsoc2018/wiki/bdclean%3A-User-friendly-biodiversity-data-cleaning-pipeline%20target=%22_blank%22">See the GSoC project idea page</a></p>
-
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-DarwinCloud">
+<p>Wieczorek, John, Paul J. Morris, James Hanken, David B. Lowery, Bertram Ludäscher, James Macklin, Timothy McPhillips, Robert A. Morris, and Qian Zhang. 2017. “Darwin Cloud: Mapping Real-World Data to Darwin Core.” <em>Biodiversity Information Science and Standards</em> 1. Pensoft Publishers: e20486. doi:<a href="https://doi.org/10.3897/tdwgproceedings.1.20486">10.3897/tdwgproceedings.1.20486</a>.</p>
 </div>
 </div>
             </section>
@@ -207,8 +281,8 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-
-<a href="installing-bdclean.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="add-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="flag-and-clean-the-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -238,7 +312,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/bd-R/bdclean-guide/edit/master/index.Rmd",
+"link": "https://github.com/bd-R/bdclean-guide/edit/master/03-configuration.Rmd",
 "text": "Edit"
 },
 "download": ["bdclean-guide.pdf", "bdclean-guide.epub"],

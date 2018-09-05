@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="installing-bdclean.html">
+<link rel="prev" href="index.html">
+<link rel="next" href="add-data.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -168,38 +168,35 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title"><code>bdclean</code> User Guide</h1>
-<h4 class="author"><em>Authors: Tomer Gueta and Thiloshon Nagarajah</em></h4>
-<h4 class="date"><em>2018-09-05</em></h4>
+<div id="installing-bdclean" class="section level1">
+<h1><span class="header-section-number">1</span> Installing <code>bdclean</code></h1>
+<hr />
+<div id="development-version-from-github" class="section level2">
+<h2><span class="header-section-number">1.1</span> Development version from GitHub</h2>
+<p>Windows users install <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a> first.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)
+devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;bd-R/bdclean&quot;</span>)
+<span class="co"># And also</span>
+devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;bd-R/bdchecks&quot;</span>)</code></pre></div>
+<p><strong>To open the Shiny app, simply run:</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">run_bdclean</span>()</code></pre></div>
 </div>
-<div id="introduction" class="section level1 unnumbered">
-<h1>Introduction</h1>
-<p><code>bdclean</code> is a user-friendly data cleaning Shiny app for the inexperienced R user. It provides features to manage complete workflow for biodiversity data cleaning, from uploading the data; gathering input from the user, in order to adjust cleaning procedures; perform the cleaning; and finally, generating various reports and several versions of the data. <code>bdclean</code> is part of <a href="https://bd-r.github.io/The-bdverse/index.html" target="_blank">The bdverse</a> – a collection of tools, that form a general framework for facilitating biodiversity science in R.</p>
-<div class="figure">
-<img src="img/bdclean_bdverse.png" title="bdclean-bdverse" alt="bdclean in the bdverse" />
-<p class="caption">bdclean in the bdverse</p>
+<div id="very-soon-a-stable-version-from-cran" class="section level2">
+<h2><span class="header-section-number">1.2</span> <span style="color:red">Very soon: a stable version from CRAN</span></h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;bdDwC&quot;</span>)</code></pre></div>
 </div>
-<div id="bdclean-overview" class="section level4 unnumbered">
-<h4><code>bdclean</code> overview</h4>
-<div class="figure">
-<img src="img/bdclean_overview.png" title="bdclean-overview" alt="bdclean overview" />
-<p class="caption">bdclean overview</p>
+<div id="possible-problems-solutions" class="section level2">
+<h2><span class="header-section-number">1.3</span> Possible problems &amp; solutions</h2>
+<p><strong><span style="color:red">[ TBA ]</span></strong></p>
+<div id="section" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> ???</h3>
+<p>TBA</p>
 </div>
-<p>bdclean workflow is comprised of three distinct mechanisms, user input, data cleaning and outputs. In most R packages this basic workflow (i.e. input; processing; output) operates via an R function. Functions are fundamental building blocks of R, and usually focus on very specific task. Users must understand and supply the function with its mandatory arguments (e.g. data in the specified format, setting of various function variables). Thus, in order to create a specific workflow, users must write an R script, which requires reasonable programing skills. bdclean avoids all that by creating a user-friendly Shiny app with questionnaire that collects the necessary user input.</p>
-</div>
-<div id="app-overview" class="section level4 unnumbered">
-<h4>App overview</h4>
-</div>
-<div id="fundings" class="section level4 unnumbered">
-<h4>Fundings</h4>
-<div class="figure">
-<img src="img/ISF.png" title="ISF" />
+<div id="section-1" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> ????</h3>
+<p>TBA</p>
 
 </div>
-<p><a href="https://summerofcode.withgoogle.com/%20target=%22_blank%22"><img src="img/GSoC.png" title="GSoC website" /></a></p>
-<p><a href="https://github.com/rstats-gsoc/gsoc2018/wiki/bdclean%3A-User-friendly-biodiversity-data-cleaning-pipeline%20target=%22_blank%22">See the GSoC project idea page</a></p>
-
 </div>
 </div>
             </section>
@@ -207,8 +204,8 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-
-<a href="installing-bdclean.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="add-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -238,7 +235,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/bd-R/bdclean-guide/edit/master/index.Rmd",
+"link": "https://github.com/bd-R/bdclean-guide/edit/master/01-Installation.Rmd",
 "text": "Edit"
 },
 "download": ["bdclean-guide.pdf", "bdclean-guide.epub"],

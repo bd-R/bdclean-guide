@@ -1,27 +1,30 @@
-# `bdDwC` citation
+# `bdclean` citation
 
 ***
 
 
 ```r
-citation("bdDwC")
+citation("bdclean")
 ```
 
 ```
 ## 
-## To cite package 'bdDwC' in publications use:
+## To cite package 'bdclean' in publications use:
 ## 
-##   Povilas Gibas, Tomer Gueta, Vijay Barve, Thiloshon Nagarajah and
-##   Yohay Carmel (2018). bdDwC: Darwinizer: Darwin Core (DwC) Field
-##   Names Standardization. R package version 0.1.15.
+##   Tomer Gueta, Thiloshon Nagarajah, Vijay Barve, Ashwin Agrawal,
+##   Povilas Gibas and Yohay Carmel (2018). bdclean: A user-friendly
+##   data cleaning app for the inexperienced R user. R package
+##   version 0.1.900. https://github.com/bd-R/bdclean
 ## 
 ## A BibTeX entry for LaTeX users is
 ## 
 ##   @Manual{,
-##     title = {bdDwC: Darwinizer: Darwin Core (DwC) Field Names Standardization},
-##     author = {Povilas Gibas and Tomer Gueta and Vijay Barve and Thiloshon Nagarajah and Yohay Carmel},
+##     title = {bdclean: A user-friendly data cleaning app for the inexperienced R user},
+##     author = {Tomer Gueta and Thiloshon Nagarajah and Vijay Barve and Ashwin Agrawal and Povilas Gibas and Yohay Carmel},
 ##     year = {2018},
-##     note = {R package version 0.1.15},
+##     note = {R package version 0.1.900},
+##     url = {https://github.com/bd-R/bdclean},
 ##   }
 ```
+
 
