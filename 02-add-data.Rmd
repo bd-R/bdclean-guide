@@ -2,35 +2,24 @@
 
 ***
 
-## Load package
-Load the `bdDwC` package
-```r
-    library(bdDwC)
-```
+## Directly download data to the app
 
-## Darwinizing a dataset
+![Downloading data from online biodiversity databases ](img/bdclean_downlad_data.png "bdclean-download-data")
 
-`bdDwC` contains Indian Reptile dataset `bdDwC:::dataReptiles`.
+**OR**
+
+## Upload data from a local file
+
+The app supports CSV files and DwC-A zip files (Darwin Core Archive)
+
+![Upload file from a disk](img/bdclean_upload_data.png "bdclean-upload-data")
+
+## Map view
+
+![View records on a map](img/bdclean_add_data_map.png "bdclean-map-view")
 
 
-The function to Darwinize a dataset is`darwinizeNames` (replace `bdDwC:::dataReptiles` with wanted dataset):
+## Table view
 
-```r
-result <- darwinizeNames(dataUser = bdDwC:::dataReptiles,
-                            dataDWC   = bdDwC:::dataDarwinCloud$data)
-```
-You can replace `bdDwC:::dataReptiles` with your dataset
+![View records in a table](img/bdclean_add_data_table.png "bdclean-table-view")
 
-Rename your dataset field names to Darwinized names using `renameUserData`:
-
-```r
-renameUserData(bdDwC:::dataReptiles, result)
-```
-## Updating [the Darwin Cloud dictionary]
-
-To get newest version of Darwin Cloud Data run:
-
-```r
-downloadCloudData()
-```
-which will download data from the remote repository and extract field and standard names.

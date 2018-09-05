@@ -1,36 +1,14 @@
-# Flag and clean the data
+# Flaging and cleaning
 
 ***
 
-## Load package
-Load the `bdDwC` package
-```r
-    library(bdDwC)
-```
+## Data flags
 
-## Darwinizing a dataset
-
-`bdDwC` contains Indian Reptile dataset `bdDwC:::dataReptiles`.
+![View flags](img/bdclean_flag.png "bdclean-download-data")
 
 
-The function to Darwinize a dataset is`darwinizeNames` (replace `bdDwC:::dataReptiles` with wanted dataset):
 
-```r
-result <- darwinizeNames(dataUser = bdDwC:::dataReptiles,
-                            dataDWC   = bdDwC:::dataDarwinCloud$data)
-```
-You can replace `bdDwC:::dataReptiles` with your dataset
+## Perform the cleaning 
 
-Rename your dataset field names to Darwinized names using `renameUserData`:
+![Perform the cleaning](img/bdclean_clean.png "bdclean-download-data")
 
-```r
-renameUserData(bdDwC:::dataReptiles, result)
-```
-## Updating [the Darwin Cloud dictionary]
-
-To get newest version of Darwin Cloud Data run:
-
-```r
-downloadCloudData()
-```
-which will download data from the remote repository and extract field and standard names.

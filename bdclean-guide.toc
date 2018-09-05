@@ -1,0 +1,28 @@
+\contentsline {chapter}{Introduction}{5}{chapter*.2}
+\contentsline {subsubsection}{bdclean's concept}{5}{section*.3}
+\contentsline {subsubsection}{App overview}{5}{section*.4}
+\contentsline {subsubsection}{Fundings}{5}{section*.5}
+\contentsline {chapter}{\numberline {1}Installing \texttt {bdclean}}{9}{chapter.1}
+\contentsline {section}{\numberline {1.1}Development version from GitHub}{9}{section.1.1}
+\contentsline {section}{\numberline {1.2}{Very soon: a stable version from CRAN}}{9}{section.1.2}
+\contentsline {section}{\numberline {1.3}Possible problems \& solutions}{9}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}???}{9}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}????}{9}{subsection.1.3.2}
+\contentsline {chapter}{\numberline {2}Add data}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Directly download data to the app}{11}{section.2.1}
+\contentsline {section}{\numberline {2.2}Upload data from a local file}{11}{section.2.2}
+\contentsline {section}{\numberline {2.3}Map view}{11}{section.2.3}
+\contentsline {section}{\numberline {2.4}Table view}{11}{section.2.4}
+\contentsline {chapter}{\numberline {3}Data cleaning configuration}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}Option 1: a questionnaire}{17}{section.3.1}
+\contentsline {section}{\numberline {3.2}Option 2: choose data checks}{17}{section.3.2}
+\contentsline {chapter}{\numberline {4}Flaging and cleaning}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}Data flags}{19}{section.4.1}
+\contentsline {section}{\numberline {4.2}Perform the cleaning}{19}{section.4.2}
+\contentsline {chapter}{\numberline {5}Artifacts and reports}{21}{chapter.5}
+\contentsline {chapter}{\numberline {6}Getting your feedback}{23}{chapter.6}
+\contentsline {section}{\numberline {6.1}Report a bug}{23}{section.6.1}
+\contentsline {section}{\numberline {6.2}Contribute}{23}{section.6.2}
+\contentsline {chapter}{\numberline {7}\texttt {bdclean} citation}{25}{chapter.7}
+\contentsline {chapter}{\numberline {8}Learn more about data cleaning}{27}{chapter.8}
+\contentsline {subsubsection}{References}{27}{section*.6}

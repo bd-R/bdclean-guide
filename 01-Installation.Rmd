@@ -10,7 +10,7 @@ Windows users install [Rtools](https://cran.r-project.org/bin/windows/Rtools/) f
 ```r
 install.packages("devtools")
 devtools::install_github("bd-R/bdclean")
-# And also
+# And also:
 devtools::install_github("bd-R/bdchecks")
 ```
 **To open the Shiny app, simply run:**
