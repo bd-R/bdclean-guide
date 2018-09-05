@@ -1,4 +1,4 @@
-# Learn more about Darwin Core
+# Learn more about data cleaning
 
 ***
 

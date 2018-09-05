@@ -1,8 +1,9 @@
-# `bdDwC` citation
+# `bdclean` citation
 
 ***
 
 ```{r}
-citation("bdDwC")
+citation("bdclean")
 ```
+
 

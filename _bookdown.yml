@@ -1,6 +1,6 @@
-book_filename: "bdDwC-guide"
+book_filename: "bdclean-guide"
 chapter_name: ""
-repo: https://github.com/bd-R/bdDwC-guide
+repo: https://github.com/bd-R/bdclean-guide
 output_dir: docs
 #rmd_files: ["index.Rmd", "01-Introduction.Rmd", "02-Diving-In.Rmd"]
 clean: [packages.bib, bookdown.bbl]

@@ -1,13 +1,7 @@
-# Installing `bdDwC`
+# Installing `bdclean`
 
 ***
-## Stable version from CRAN
 
-[comment]: <> (Need-To-Be-Updated!)
-
-```r
-install.packages("bdDwC")
-```
 
 ## Development version from GitHub
 
@@ -15,7 +9,22 @@ Windows users install [Rtools](https://cran.r-project.org/bin/windows/Rtools/) f
 
 ```r
 install.packages("devtools")
-devtools::install_github("bd-R/bdDwC")
+devtools::install_github("bd-R/bdclean")
+# And also
+devtools::install_github("bd-R/bdchecks")
+```
+**To open the Shiny app, simply run:**
+
+```r
+run_bdclean()
+```
+
+## <span style="color:red">Very soon: a stable version from CRAN</span>
+
+[comment]: <> (Need-To-Be-Updated!)
+
+```r
+install.packages("bdDwC")
 ```
 
 ## Possible problems & solutions

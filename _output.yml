@@ -6,10 +6,10 @@ bookdown::gitbook:
     toc:
       collapse: section
       before: |
-        <li><a href="./">bdDwC User Guide</a></li>
+        <li><a href="./">bdclean User Guide</a></li>
       after: |
         <li><a href="https://bd-r.github.io/The-bdverse/the-bdverse-team.html" target="_blank"> (c) The bdverse team</a></li>
-    edit: https://github.com/bd-R/bdDwC-guide/edit/master/%s
+    edit: https://github.com/bd-R/bdclean-guide/edit/master/%s
     download: ["pdf", "epub"]
 bookdown::pdf_book:
   includes:
